@@ -1,0 +1,30 @@
+
+.info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.info__btn {
+    width: 280px;
+    padding: 20px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background-color: #384ad3;
+    box-shadow: 5px 5px 10px -5px #000;
+    transition: .3s;
+
+    & + & {
+        margin-top: 30px;
+    }
+
+    &:hover {
+        background-color: #273bd2;
+        box-shadow: 0 0 0 0 #000;
+        transform: scale(0.99);
+    }
+}
