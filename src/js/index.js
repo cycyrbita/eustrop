@@ -23,4 +23,15 @@ window.onload = function() {
         burger.classList.toggle('visible');
     }
     /* Логика бургера конец*/
+
+
+    /*Логика блока table начало*/
+    var tabs = document.getElementsByClassName('table__title');
+
+    for(var i = 0; i < tabs.length; i++) {
+        tabs[i].onclick = function() {
+            this.classList.toggle('visible');
+        };
+    }
+    /*Логика блока table конец*/
 };
