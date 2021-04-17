@@ -39,6 +39,10 @@ body {
   line-height: 1.2;
   color: #000;
   background-color: #fff;
+
+  &.hidden {
+    overflow: hidden;
+  }
 }
 
 article,

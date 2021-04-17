@@ -34,4 +34,24 @@ window.onload = function() {
         };
     }
     /*Логика блока table конец*/
+
+    /*Форма регистрации начало*/
+    var logIn = document.getElementById('logIn'),
+        logInOpen = document.getElementById('logIn-open'),
+        logInClose = document.getElementById('logIn-close');
+
+    if(logInOpen != null && logInClose != null) {
+        logInOpen.onclick = function(e) {
+            e.preventDefault();
+            logIn.classList.add('visible');
+            document.body.classList.add('hidden');
+        }
+
+        logInClose.onclick = function(e) {
+            e.preventDefault();
+            logIn.classList.remove('visible');
+            document.body.classList.remove('hidden');
+        }
+    }
+    /*Форма регистрации конец*/
 };
