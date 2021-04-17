@@ -26,11 +26,11 @@ window.onload = function() {
 
 
     /*Логика блока table начало*/
-    var tabs = document.getElementsByClassName('table__title');
+    var tabs = document.getElementsByClassName('table_manual-tabs');
 
     for(var i = 0; i < tabs.length; i++) {
-        tabs[i].onclick = function() {
-            this.classList.toggle('visible');
+        tabs[i].getElementsByTagName('caption')[0].onclick = function() {
+            this.parentNode.classList.toggle('visible');
         };
     }
     /*Логика блока table конец*/
