@@ -1,32 +1,48 @@
 <div class="info">
     <a href="/template/content.html" class="info__btn">Характеристики</a>
     <a href="/template/registr.html" class="info__btn">Обслуживание</a>
-    <a href="#" id="logIn-open" class="info__btn">Открыть форму регистрации</a>
+    <a href="#" id="register-open" class="info__btn">Открыть форму регистрации</a>
     <a href="/template/content.html" class="info__btn">Ремонт</a>
-    <div class="logIn" id="logIn">
+    <div class="logIn" id="register">
         <form action="POST" class="logIn__form">
-            <div class="logIn__close" id="logIn-close">
+            <div class="logIn__close" id="register-close">
                 <span></span>
                 <span></span>
             </div>
-            <h3>Авторизация</h3>
-            <label class="error">
-                <span>Введите ваш логин</span>
-                <input type="text" name="login">
-                <p>Такого логина не существует...</p>
+            <h3 class="logIn__title">Регистрация</h3>
+            <label class="logIn__label error">
+                <span class="logIn__name">Введите ваше имя</span>
+                <input class="logIn__field" type="text">
+                <p class="messageError">Введите корректное имя...</p>
             </label>
-            <label class="success">
-                <span>Введите ваш пароль</span>
-                <input type="text" name="password">
-                <p>Неверный пароль...</p>
+            <label class="logIn__label success">
+                <span class="logIn__name" class="logIn__name">Введите вашу почту</span>
+                <input class="logIn__field" type="text">
+                <p class="messageError">Такой почты не существует...</p>
             </label>
-            <label>
-                <span>Введите сюда: Hello World!</span>
-                <input type="text" name="password">
-                <p>Вы ввели неверный Hello World!...</p>
+            <label class="logIn__label">
+                <span class="logIn__name">Форма участия</span>
+                <select class="logIn__field">
+                    <option value="P">Очно</option>
+                    <option value="PD">Очно, прочитаю доклад</option>
+                    <option value="T">Дистанционно (трансляцию)</option>
+                    <option value="PT">Дистанционно и очно</option>
+                    <option value="R"> Посмотрю запись после</option>
+                </select>
+                <p class="messageError">Выберите форму участия...</p>
             </label>
-            <button type="submit">Войти</button>
-            <a href="#">Забыли пароль?</a>
+            <label class="logIn__label">
+                <span class="logIn__name">Напишите нам</span>
+                <textarea class="logIn__field"></textarea>
+                <p class="messageError">Выберите форму участия...</p>
+            </label>
+            <label class="logIn__label">
+                <input class="logIn__field" type="checkbox">
+                <span>Я согласен с условиями обработки персональных данных</span>
+                <p class="messageError">Выберите форму участия...</p>
+            </label>
+            <button class="logIn__btn" type="submit">Зарегистрироваться</button>
+            <a href="#">Войти</a>
         </form>
     </div>
 </div>

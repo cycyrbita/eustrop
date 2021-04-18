@@ -36,20 +36,20 @@ window.onload = function() {
     /*Логика блока table конец*/
 
     /*Форма регистрации начало*/
-    var logIn = document.getElementById('logIn'),
-        logInOpen = document.getElementById('logIn-open'),
-        logInClose = document.getElementById('logIn-close');
+    var register = document.getElementById('register'),
+        registerClose = document.getElementById('register-close'),
+        registerOpen = document.getElementById('register-open');
 
-    if(logInOpen != null && logInClose != null) {
-        logInOpen.onclick = function(e) {
+    if(registerOpen != null && registerClose != null && register != null) {
+        registerOpen.onclick = function(e) {
             e.preventDefault();
-            logIn.classList.add('visible');
+            register.classList.add('visible');
             document.body.classList.add('hidden');
         }
 
-        logInClose.onclick = function(e) {
+        registerClose.onclick = function(e) {
             e.preventDefault();
-            logIn.classList.remove('visible');
+            register.classList.remove('visible');
             document.body.classList.remove('hidden');
         }
     }
