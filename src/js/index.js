@@ -54,4 +54,11 @@ window.onload = function() {
         }
     }
     /*Форма регистрации конец*/
+
+    var myTooltip = new Tooltip({
+        selector: 'span, a, b, i, strong, div',
+        tooltipClass: 'tooltip',
+        margin: 10,
+        position: 'top-center',
+    });
 };

@@ -1,0 +1,165 @@
+.tooltip {
+    display: block;
+    z-index: 999;
+    position: fixed;
+    left: -100%;
+    max-width: 15em;
+    padding: .5em;
+    margin: 0;
+    line-height: 1;
+    font-family: sans-serif;
+    border-radius: 2px;
+    color: #ddd;
+    background: #333;
+    opacity: 0;
+    transition: opacity .3s ease
+}
+
+.tooltip:before {
+    content: "";
+    z-index: -1;
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #333;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.tooltip--visible {
+    position: absolute;
+    opacity: 1
+}
+
+.tooltip--top-center:before {
+    top: unset;
+    right: unset;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -5px
+}
+
+.tooltip--top-start:before {
+    top: unset;
+    right: unset;
+    bottom: -5px;
+    left: 10px
+}
+
+.tooltip--top-end:before {
+    top: unset;
+    left: unset;
+    bottom: -5px;
+    right: 10px
+}
+
+.tooltip--bottom-center:before {
+    bottom: unset;
+    right: unset;
+    top: -5px;
+    left: 50%;
+    margin-left: -5px
+}
+
+.tooltip--bottom-start:before {
+    bottom: unset;
+    right: unset;
+    top: -5px;
+    left: 10px
+}
+
+.tooltip--bottom-end:before {
+    bottom: unset;
+    left: unset;
+    top: -5px;
+    right: 10px
+}
+
+.tooltip--left-center:before {
+    bottom: unset;
+    left: unset;
+    top: 50%;
+    right: -5px;
+    margin-top: -5px
+}
+
+.tooltip--left-start:before {
+    bottom: unset;
+    left: unset;
+    top: 10px;
+    right: -5px
+}
+
+.tooltip--left-end:before {
+    left: unset;
+    top: unset;
+    bottom: 10px;
+    right: -5px
+}
+
+.tooltip--right-center:before {
+    bottom: unset;
+    right: unset;
+    top: 50%;
+    left: -5px;
+    margin-top: -5px
+}
+
+.tooltip--right-start:before {
+    bottom: unset;
+    right: unset;
+    top: 10px;
+    left: -5px
+}
+
+.tooltip--right-end:before {
+    top: unset;
+    right: unset;
+    bottom: 10px;
+    left: -5px
+}
+
+.tooltip {
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.2;
+    background: #326273
+}
+
+.tooltip:before {
+    background-color: #326273
+}
+
+.tooltip-info {
+    position: relative;
+    z-index: 1;
+    transform: translate(-5px, -7px);
+    display: inline-block;
+    padding: 2px;
+    font-size: 10px;
+    border: 1px solid d0d0d0;
+    background-color: #005fff;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    text-align: center;
+    line-height: 10px;
+    box-sizing: content-box;
+    color: #fff;
+    cursor: default;
+
+    &::before {
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        z-index: 2;
+        width: 25px;
+        height: 25px;
+        content: '';
+    }
+}
