@@ -1,38 +1,40 @@
-
-window.onload = function() {
+window.onload = function () {
     /* Логика бургера начало*/
     var burger = document.getElementById('js-header__burger'),
         nav = document.getElementById('nav');
 
-    burger.onclick = function() {
-        toggleMenu();
-    }
-
-    document.onclick = function(e) {
-        var its_menu = e.target == nav || nav.contains(e.target);
-        var its_btnMenu = e.target == burger;
-        var menu_is_active = nav.classList.contains('visible');
-
-        if (!its_menu && !its_btnMenu && menu_is_active) {
+    if (burger != null && nav != null) {
+        burger.onclick = function () {
             toggleMenu();
         }
-    };
 
-    function toggleMenu() {
-        nav.classList.toggle('visible');
-        burger.classList.toggle('visible');
+        document.onclick = function (e) {
+            var its_menu = e.target == nav || nav.contains(e.target);
+            var its_btnMenu = e.target == burger;
+            var menu_is_active = nav.classList.contains('visible');
+
+            if (!its_menu && !its_btnMenu && menu_is_active) {
+                toggleMenu();
+            }
+        };
+
+        function toggleMenu() {
+            nav.classList.toggle('visible');
+            burger.classList.toggle('visible');
+        }
     }
     /* Логика бургера конец*/
 
 
     /*Логика блока table начало*/
     var tabs = document.getElementsByClassName('table_manual-tabs');
-
-    for(var i = 0; i < tabs.length; i++) {
-        tabs[i].getElementsByTagName('caption')[0].onclick = function() {
-            this.parentNode.classList.toggle('visible');
-        };
-    }
+    if (tabs != null) {
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].getElementsByTagName('caption')[0].onclick = function () {
+                this.parentNode.classList.toggle('visible');
+            };
+        }
+    }    
     /*Логика блока table конец*/
 
     /*Форма регистрации начало*/
@@ -40,14 +42,14 @@ window.onload = function() {
         registerClose = document.getElementById('register-close'),
         registerOpen = document.getElementById('register-open');
 
-    if(registerOpen != null && registerClose != null && register != null) {
-        registerOpen.onclick = function(e) {
+    if (registerOpen != null && registerClose != null && register != null) {
+        registerOpen.onclick = function (e) {
             e.preventDefault();
             register.classList.add('visible');
             document.body.classList.add('hidden');
         }
 
-        registerClose.onclick = function(e) {
+        registerClose.onclick = function (e) {
             e.preventDefault();
             register.classList.remove('visible');
             document.body.classList.remove('hidden');
