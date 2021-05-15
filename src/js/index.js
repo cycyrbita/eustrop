@@ -56,11 +56,105 @@ window.onload = function () {
         }
     }
     /*Форма регистрации конец*/
+    
+    /*логика блоков(home__list-item) на главной странице*/
+    function addHeight(param) {
+        var home = document.getElementsByClassName('home')[0];
+        home.classList.add('show');
+        var item = document.getElementsByClassName(param);
+        var itemHeight = item[0].offsetWidth;
+        for (var i = 0; i < item.length; i++) {
+            item[i].style.height = itemHeight + 'px';
+        }
+    }
 
-    var myTooltip = new Tooltip({
-        selector: 'span, a, b, i, strong, div',
-        tooltipClass: 'tooltip',
-        margin: 10,
-        position: 'top-center',
-    });
+    var homeListItem = document.getElementsByClassName('home__list-item');
+    var time = 100;
+
+    function addShowAnimation() {
+        for(var i = 0; i < homeListItem.length; i++) {
+            time = getRandomArbitrary(100, 1000);
+            setTime(i);
+        }
+    }
+
+    function removeShowAnimation () {
+        for(var i = 0; i < homeListItem.length; i++) {
+            time = getRandomArbitrary(100, 1000);
+            setTimeRemove(i);
+        }
+    }
+
+    function setTime(count) {
+        setTimeout (function() {
+            homeListItem[count].classList.add('show');
+        }, time);
+    }
+
+    function setTimeRemove(count) {
+        setTimeout (function() {
+            homeListItem[count].classList.remove('show');
+        }, time);
+    }
+
+    function getRandomArbitrary(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    function addPaddingHome() {
+        var homeBody = document.getElementsByClassName('home__body')[0];
+        var homeHeader = document.getElementsByClassName('home__header')[0].offsetHeight;
+        var homeFooter = document.getElementsByClassName('home__footer')[0].offsetHeight;
+        homeBody.style.paddingTop = homeHeader + "px";
+        homeBody.style.paddingBottom = homeFooter + "px";
+    }
+
+    function removePaddingHome() {
+        var homeBody = document.getElementsByClassName('home__body')[0];
+        homeBody.style.paddingTop = "0px";
+        homeBody.style.paddingBottom = "0px";
+    }
+
+    function showHome() {
+        window.onresize = function() {
+            addHeight('home__list-item');
+            addPaddingHome();
+        }
+        addHeight('home__list-item');
+        addShowAnimation();
+        addPaddingHome();
+    }
+
+    function hideHome() {
+        window.onresize = function() {
+            removePaddingHome();
+        }
+        removeShowAnimation();
+        removePaddingHome();
+        var home = document.getElementsByClassName('home')[0];
+        home.classList.remove('show');
+    }
+
+    if (document.getElementsByClassName('home').length) {
+        document.getElementsByClassName('home__show')[0].onclick = function() {
+            showHome();
+            this.remove();
+        }
+    }
+    /*логика блоков(home__list-item) на главной странице конец*/
+
+    var navSpan = document.querySelectorAll('.introList');
+    if (navSpan != null) {
+        for (var i = 0; i < navSpan.length; i++) {
+            navSpan[i].onclick = function(e) {
+                e.stopPropagation();
+                if(this.classList.contains('open')) {
+                    this.classList.remove('open');
+                } else {
+                    this.classList.add('open');
+                }
+            };
+        }
+    }
+    
 };

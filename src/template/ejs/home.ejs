@@ -2,16 +2,69 @@
 <html lang="ru">
 <%- include('block/head') %>
 
-<body class="page">
-    <div class="home">
-        <div class="home__body">
-            <div class="home__title">QXYZ - Locum tuum in universo. Incipit!</div>
-            <form class="home__form">
-                <label class="home__label">
-                    <input class="home__field" type="text" placeholder="Напиши сюда...">
-                </label>
-                <button class="home__btn" type="submit">Отправить</button>
-            </form>
+<body>
+    <div class="page">
+        <div class="home">
+            <div class="home__header">
+                <%- include('block/header') %>
+            </div>
+            <div class="home__body">
+                <div class="home__head">
+                    <h1 class="home__title">Жмякни на кнопку ниже</h1>
+                    <form class="home__form">
+                        <label class="home__label">
+                            <input type="text" class="home__field" placeholder="Вводи...">
+                            <button class="home__btn" type="submit">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </label>
+                    </form>
+                    <div class="home__show"><span>Начать</span></div>
+                </div>
+                <div class="home__list">
+                    <div class="home__list-item"><img src="http://dummyimage.com/150x60/99cccc.gif&text=The+image!" /></div>
+                    <div class="home__list-item"><img src="http://placehold.it/640x70/33bee5/ffffff/&text=smartlanding" />
+                    </div>
+                    <div class="home__list-item"><img src="http://dummyimage.com/150x60/99cccc.gif" /></div>
+                    <div class="home__list-item"><img src="http://dummyimage.com/150x60/99cccc/ffffff.gif&text=The+image!" /></div>
+                    <div class="home__list-item"><img src="http://dummyimage.com/150x60.png/99cccc/aa00aa&text=The+image!" /></div>
+                    <div class="home__list-item"><img src="http://dummyimage.com/150x60/99cccc.jpg/0b0b0b&text=The+image!" /></div>
+                    <div class="home__list-item"><img src="http://dummyimage.com/150x150/99cccc.gif&text=The+image!" /></div>
+                    <div class="home__list-item"><img src="http://dummyimage.com/150x150/99cccc.gif&text=The+image!" /></div>
+                    <div class="home__list-item"><img src="http://dummyimage.com/150x150/99cccc.gif&text=The+image!" /></div>
+                    <div class="home__list-item"><img src="http://dummyimage.com/150x150/99cccc.gif&text=The+image!" /></div>
+                    <div class="home__list-item"><img src="http://dummyimage.com/150x150/99cccc.gif&text=The+image!" /></div>
+                    <div class="home__list-item"><img src="http://dummyimage.com/150x150/99cccc.gif&text=The+image!" /></div>
+                    <div class="home__list-item"><img src="http://dummyimage.com/150x150/99cccc.gif&text=The+image!" /></div>
+                    <div class="home__list-item"><img src="http://dummyimage.com/150x150/99cccc.gif&text=The+image!" /></div>
+                    <div class="home__list-item"><img src="http://dummyimage.com/150x150/99cccc.gif&text=The+image!" /></div>
+                    <div class="home__list-item"><img src="http://dummyimage.com/150x150/99cccc.gif&text=The+image!" /></div>
+                    <div class="home__list-item"><img src="http://dummyimage.com/150x150/99cccc.gif&text=The+image!" /></div>
+                    <div class="home__list-item"><img src="http://dummyimage.com/150x150/99cccc.gif&text=The+image!" /></div>
+                    <div class="home__list-item">L</div>
+                    <div class="home__list-item">Z</div>
+                    <div class="home__list-item">X</div>
+                    <div class="home__list-item">C</div>
+                    <div class="home__list-item">V</div>
+                    <div class="home__list-item">B</div>
+                    <div class="home__list-item">N</div>
+                    <div class="home__list-item">M</div>
+                    <div class="home__list-item">0</div>
+                    <div class="home__list-item">1</div>
+                    <div class="home__list-item">2</div>
+                    <div class="home__list-item">3</div>
+                    <div class="home__list-item">4</div>
+                    <div class="home__list-item">5</div>
+                    <div class="home__list-item">6</div>
+                    <div class="home__list-item">7</div>
+                    <div class="home__list-item">8</div>
+                    <div class="home__list-item">9</div>
+                </div>
+            </div>
+            <div class="home__footer">
+                <%- include('block/footer') %>
+            </div>
         </div>
     </div>
     <%- include('block/script') %>

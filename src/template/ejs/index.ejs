@@ -2,9 +2,14 @@
 <html lang="ru">
 <%- include('block/head') %>
 
-<body class="page">
-    <%- include('block/header') %>
-    <%- include('block/info') %>
+<body>
+    <div class="page">
+        <%- include('block/header') %>
+            <div class="page__body">
+                <%- include('block/info') %>
+            </div>
+        <%- include('block/footer') %>
+    </div>
     <%- include('block/script') %>
 </body>
 
