@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<%- include('block/head') %>
+
+<body>
+    <div class="page">
+        <%- include('block/header') %>
+        <div class="page__body">
+            <form class="logIn__form logIn__form_enter">
+                <h3 class="logIn__title">Вход</h3>
+                <label class="logIn__label">
+                    <span class="logIn__name">Введите ваше имя</span>
+                    <input class="logIn__field" type="text">
+                    <p class="messageError">Введите корректное имя...</p>
+                </label>
+                <label class="logIn__label">
+                    <span class="logIn__name" class="logIn__name">Введите вашу почту</span>
+                    <input class="logIn__field" type="text">
+                    <p class="messageError">Такой почты не существует...</p>
+                </label>
+                <button class="logIn__btn" type="submit">Войти</button>
+            </form>
+        </div>
+        <%- include('block/footer') %>
+    </div>
+    <%- include('block/script') %>
+</body>
+
+</html>
