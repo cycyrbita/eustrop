@@ -5,7 +5,7 @@
                 <img src="../media/manual/dvig.png" alt="">
             </div>
             <div class="manual__header-info">
-                <table class="table table_manual-face">
+                <table class="table">
                     <caption>Модель QC380</caption>
                     <tbody>
                         <tr>
@@ -44,65 +44,42 @@
                 </table>
             </div>
         </div>
-
-        <table class="table table_manual-tabs">
-            <caption>Модель QC380</caption>
-            <tbody>
-                <tr>
-                    <th>Параметр</th>
-                    <th>[MU] eq</th>
-                    <th>Значение</th>
-                    <th>Параметр</th>
-                    <th>[MU] eq</th>
-                    <th>Значение</th>
-                </tr>
-                <tr>
-                    <td>Тип</td>
-                    <td>мм</td>
-                    <td>90</td>
-                    <td>Тип</td>
-                    <td>мм</td>
-                    <td>90</td>
-                </tr>
-                <tr>
-                    <td>Тип</td>
-                    <td>мм</td>
-                    <td>90</td>
-                    <td>Тип</td>
-                    <td>мм</td>
-                    <td>90</td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table_manual-tabs content">
-            <caption>Модель QC380</caption>
-            <tr>
-                <td>
-                    <h2>CUNC - экстремальный минимум для программиста, с элементами джазовой импровизации</h2>
-                    <p>45 Unix - краткая история, принципы (все есть файл, дерево каталогов, пользователи, процессы, fork/exec, tty, sh, /bin/*, /etc/*)</p>
-                    <p>45 Console - shell (sh,csh,ash,bash), переменные окружения (PATH, TERM, EDITOR, PAGER, MM_CHARSET, LANG), stdin, stdout, stderr, конвееры (pipes), команды: pwd, ls, cp, mv, cat, man, vi</p>
-                    <p>45 Networks - <b>Модели OSI и DoD, IPv4</b> - адрес, маска сети, ICMP, UDP, TCP, заголовок пакета IP, Ethernet, ARP, команды: ifconfig, ping, arp, traceroute, telnet, route, netstat -r, nslookup (dig,host) файлы: /etc/hosts, /etc/resolv.conf, /etc/protocols подсматривание трафика через /dev/bpf: tcpdump, tcpflow, trafshow</p>
-                    <h2>CUNC - экстремальный минимум для программиста, с элементами джазовой импровизации</h2>
-                    <ul>
-                        <li>Почему BSD? (действительно, эту практику можно делать на любом Linux или *BSD, minix, Solaris [добавить по вкусу преподавателя])</li>
-                        <li>Установка FreeBSD в виртуальную машину (разбиение дисков, загрузка в singleuser mode, fsck, mount, замена пароля root при потере)</li>
-                        <li>Добавление <mark>и удаление пользователей и групп, vipw</mark> (и работа с редактором vi), /etc/passwd, /etc/group и т.п.</li>
-                        <li>Дерево исходных текстов (где и что лежит)</li>
-                        <li>Дерево портов и установка пакетов (где, что и как)</li>
-                        <li>Изменение, перекомпиляция и установка какой-нибудь утилиты, например /usr/src/bin/echo</li>
-                        <li>Пересборка ядра и мира (buildkernel, buildworld)</li>
-                        <li>Файлы, <i>hard∧soft links, crunch и директория</i> /rescue</li>
-                        <li>Права доступа к файлу, ugo+rwx, stickybit,chmod, chown, простейший скрипт на sh</li>
-                        <li>Параметры загрузки /etc/rc.conf, скрипты /etc/rc.d</li>
-                        <li><a href="">Базовая настройка сети, ifconfig, route, netstat,</a> /etc/hosts, /etc/resolv.conf, ping, telnet, traceroute, nslookup (host, dig)</li>
-                    </ul>
-                    <h2>CUNC - экстремальный минимум для программиста, с элементами джазовой импровизации</h2>
-                    <p>45 Console - shell (sh,csh,ash,bash), переменные окружения (PATH, TERM, EDITOR, PAGER, MM_CHARSET, LANG), stdin, stdout, stderr, конвееры (pipes), команды: pwd, ls, cp, mv, cat, man, vi</p>
-                    <h3>CUNC - экстремальный минимум для программиста, с элементами джазовой импровизации</h3>
-                    <p><i> кстремальный минимум для программиста, с элементами джазовой импровизации кстремальный минимум для программиста, с элементами джазовой импровизации 45 Networks - Модели OSI и <a href="">DoD, IPv4 - адрес,</a> <span class="tooltip-info" href="#" title="This is example content. You can set it dfgdfgdfg dfgdfgdfgdfgdfg by adding title or data-tooltip attribute." data-position="top-start">?</span> маска сети, ICMP, UDP, TCP, заголовок пакета IP, Ethernet, ARP, команды: ifconfig, ping, arp, traceroute, telnet, route, netstat -r, nslookup (dig,host) файлы: /etc/hosts, /etc/resolv.conf, /etc/protocols подсматривание трафика через /dev/bpf: tcpdump, tcpflow, trafshow</i></p>
-                </td>
-            </tr>
-        </table>
+        <div class="tabs content">
+            <h2 class="tabs__open">Lorem, ipsum dolor.</h2>
+            <div class="tabs__body">
+                <div class="table">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Параметр</th>
+                                <th>[MU] eq</th>
+                                <th>Значение</th>
+                                <th>Параметр</th>
+                                <th>[MU] eq</th>
+                                <th>Значение</th>
+                            </tr>
+                            <tr>
+                                <td>Тип</td>
+                                <td>мм</td>
+                                <td>90</td>
+                                <td>Тип</td>
+                                <td>мм</td>
+                                <td>90</td>
+                            </tr>
+                            <tr>
+                                <td>Тип</td>
+                                <td>мм</td>
+                                <td>90</td>
+                                <td>Тип</td>
+                                <td>мм</td>
+                                <td>90</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, sit pariatur ex harum temporibus inventore fugiat accusamus modi consequatur debitis veritatis repellendus molestiae nesciunt, incidunt velit culpa odit odio recusandae quia alias eaque! Aut consequatur exercitationem eaque a accusamus quo tempora, expedita porro, sapiente libero fuga placeat voluptatum, odio explicabo! Ducimus totam delectus magni dolorum voluptates, quaerat veniam alias. Quidem eum cum sunt, libero atque necessitatibus cumque placeat non, ut dolor eligendi repudiandae reiciendis excepturi odio sit mollitia aut cupiditate numquam omnis praesentium dolorum molestias accusantium quia veritatis. Explicabo, pariatur. Obcaecati repellat commodi ea nesciunt facere voluptatibus reiciendis numquam quod a eaque, labore quasi qui reprehenderit impedit nisi ratione aut. Deserunt officia nobis voluptatem quae asperiores excepturi necessitatibus illo voluptas accusantium laboriosam, ducimus quisquam recusandae laborum quod. Eius, illum explicabo. Quibusdam porro illum molestiae vero adipisci totam numquam quo perspiciatis provident ratione animi est eaque ex vitae accusamus magni a voluptates, dolor necessitatibus dignissimos! Fugit officia, natus cumque totam voluptatum quos laboriosam explicabo, tempora ex sint qui inventore illo eum nisi soluta. Dolores, facere quaerat! Perferendis corporis rem voluptatibus accusantium, architecto ex magnam adipisci incidunt assumenda, culpa illo eaque numquam quos accusamus enim porro neque molestiae saepe ullam modi iure.</p>
+            </div>
+        </div>
     </div>
 </div>
 </div>

@@ -1,127 +1,24 @@
 .table {
-    & + & {
-        margin-top: 15px;
-    }
+    overflow: auto;
 
-    &.table_manual-face {
+    table {
         width: 100%;
-
-        & tr {
-            background-color: #f1f1f1;
-            border-top: 5px solid #fff;
-            border-bottom: 5px solid #fff;
-        }
-
-        & td {
-            padding: 5px 15px;
-            margin: 0;
-            font-size: 14px;
-
-            &:first-child {
-                font-size: 18px;
-                font-weight: 700;
-            }
-        }
-
-        & th {
-            padding: 5px 15px;
-        }
-
-        caption {
-            position: relative;
-            margin-bottom: 10px;
-            font-size: 24px;
-            font-weight: 700;
-            text-align: left;
-        }
     }
 
-    &.table_manual-tabs {
-        width: 100%;
-        overflow: auto;
-
-        caption {
-            position: relative;
-            padding: 15px 15px 15px 45px;
-            font-size: 18px;
-            font-weight: 700;
-            text-align: left;
-            cursor: pointer;
-            background-color: #f1f1f1;
-
-            &::before {
-                position: absolute;
-                top: 50%;
-                left: 15px;
-                width: 16px;
-                height: 2px;
-                content: '';
-                background-color: #000;
-                -webkit-transform: translateY(-50%);
-                -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
-            }
-
-            &::after {
-                position: absolute;
-                top: 50%;
-                left: 22px;
-                width: 2px;
-                height: 16px;
-                content: '';
-                background-color: #000;
-                -webkit-transform: translateY(-50%);
-                -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
-            }
-        }
-
-        & tbody {
-            display: none;
-        }
-
-        &.visible {
-            & caption {
-                &::after {
-                    display: none;
-                }
-            }
-
-            & tbody {
-                display: table-row-group;
-            }
-        }
-
-        & th {
-            padding: 15px;
-            font-weight: 700;
-            border: 1px solid #f1f1f1;
-        }
-
-        & td {
-            padding: 15px;
-            font-size: 14px;
-            border: 1px solid #f1f1f1;
-        }
+    caption {
+        padding: 10px;
+        font-weight: 700;
     }
-}
 
-@media (max-width: 768px) {
-    .table {
-        &.visible {
-            display: block;
-        }
+    & th {
+        padding: 10px;
+        border: 1px solid #f1f1f1;
+        background-color: #f1f1f1;
+        white-space: nowrap;
     }
-}
 
-@media (max-width: 480px) {
-    .table {
-        &.table_manual-face {
-            & td {
-                &:first-child {
-                    font-size: 16px;
-                }
-            }
-        }
+    & td {
+        padding: 5px;
+        border: 1px solid #f1f1f1;
     }
 }

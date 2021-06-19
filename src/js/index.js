@@ -25,17 +25,16 @@ window.onload = function () {
     }
     /* Логика бургера конец*/
 
-
-    /*Логика блока table начало*/
-    var tabs = document.getElementsByClassName('table_manual-tabs');
-    if (tabs != null) {
-        for (var i = 0; i < tabs.length; i++) {
-            tabs[i].getElementsByTagName('caption')[0].onclick = function () {
+    /*Логика блока content начало*/
+    var $open = document.getElementsByClassName('tabs__open');
+    if ($open != null) {
+        for (var i = 0; i < $open.length; i++) {
+            $open[i].onclick = function () {
                 this.parentNode.classList.toggle('visible');
             };
         }
-    }    
-    /*Логика блока table конец*/
+    }
+    /*Логика блока content конец*/
 
     /*Форма регистрации начало*/
     var register = document.getElementById('register'),
