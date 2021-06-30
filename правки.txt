@@ -1,0 +1,66 @@
+class="header">	header меняем на CTUIH
+class="container">  CTUIH__container
+class="header__body"> CTUIH__body
+class="header__logo"> CTUIH__logo
+class="header__logo-media"> CTUIH__logoMedia
+class="header__nav" id="nav"> CTUIH__nav id=CTUIH__nav
+class="introList"><span>QR-code</span> CTUIH__navDropDown
+	nav__dropdown
+class="header__login"><a href="">Регистрация</a></div> CTUIH__login
+class="header__burger" id="js-header__burger"> CTUIH__burger id=CTUIH__burger
+
+
+CTUIH_ - Классы в заголовке
+CTUIL_ - Классы в левом блоке
+CTUID_ - Классы в центральном блоке
+CTUIR_ - Классы в правом блоке
+CTUIF_ - Классы в footer
+
+
+CTUI_
+
+
+добавить классы
+.warning
+.btn, .CTUI_BigGreenButton - большая_зеленая_кнопка (CTUI_BigGreenButton)
+
+.class1, .class2 {
+...
+}
+
+/* imported classes from EustroJAM * design2019 */
+.warning {
+ color: red;
+ margin-bottom: 15px;
+ margin-top: 15px;
+ margin-left: 15px;
+ margin-right: 15px;
+ background: whitesmoke;
+ text-align: center;
+ font-size: 1.2em;
+ font-weight: bold;
+}
+.warning a {
+ color: blue;
+}
+
+.btn {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: #00F;
+  background-color: #5F5;
+  text-align: center;
+  border: 1px solid #000;
+  font-weight: 400;
+}
+
+.btn:hover {
+  text-decoration: none;
+  background-color: #050;
+  color: #ffffff;
+}
