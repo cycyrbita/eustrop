@@ -1,13 +1,9 @@
 
-.CTUIH_header {
+.CTUIH {
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: #efefef;
     border-bottom: 1px solid #dedede;
-}
-
-.CTUIH_header__body {
-
 }
 
 .CTUIH_header__logo {
@@ -28,7 +24,7 @@
     }
 }
 
-.CTUIH_header__logo-media {
+.CTUIH_header__logomedia {
     display: inline-block;
     max-width: 50px;
     padding-right: 15px;
@@ -153,7 +149,7 @@
                             width: 5px;
                             height: 9px;
                             content: "";
-                            background-image: url("../media/CTUIH_header/arrow.png");
+                            background-image: url("../media/header/arrow.png");
                         }
                     }
                 }
@@ -171,7 +167,7 @@
 }
 
 @media (max-width: 1310px) {
-    .CTUIH_header {
+    .CTUIH {
         position: relative;
 
         & .container {

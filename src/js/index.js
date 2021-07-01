@@ -1,6 +1,6 @@
 window.onload = function () {
     /* Логика бургера начало*/
-    var burger = document.getElementById('js-CTUIH_header__burger'),
+    var burger = document.getElementById('CTUIH_header__burger'),
         nav = document.getElementById('nav__dropdown');
 
     if (burger != null && nav != null) {
@@ -157,7 +157,6 @@ window.onload = function () {
     }
     
     const anchors = document.querySelectorAll('a.docs__media-point');
-    
     for (let anchor of anchors) {
         anchor.addEventListener('click', function (e) {
             let $items = document.querySelectorAll('.docs__item');
