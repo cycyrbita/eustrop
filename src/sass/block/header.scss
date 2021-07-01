@@ -1,16 +1,16 @@
 
-.header {
+.CTUIH_header {
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: #efefef;
     border-bottom: 1px solid #dedede;
 }
 
-.header__body {
+.CTUIH_header__body {
 
 }
 
-.header__logo {
+.CTUIH_header__logo {
     display: inline-block;
     text-decoration: none;
 
@@ -28,7 +28,7 @@
     }
 }
 
-.header__logo-media {
+.CTUIH_header__logo-media {
     display: inline-block;
     max-width: 50px;
     padding-right: 15px;
@@ -36,11 +36,11 @@
     border-right: 1px solid #dedede;
 }
 
-.header__burger {
+.CTUIH_header__burger {
     display: none;
 }
 
-.header__login {
+.CTUIH_header__login {
     padding: 5px 15px;
     border-radius: 3px;
     background-color: #519ddc;
@@ -59,7 +59,7 @@
     }
 }
 
-.header__nav {
+.CTUIH_header__nav {
     float: right;
     margin-top: 4px;
 
@@ -153,7 +153,7 @@
                             width: 5px;
                             height: 9px;
                             content: "";
-                            background-image: url("../media/header/arrow.png");
+                            background-image: url("../media/CTUIH_header/arrow.png");
                         }
                     }
                 }
@@ -171,7 +171,7 @@
 }
 
 @media (max-width: 1310px) {
-    .header {
+    .CTUIH_header {
         position: relative;
 
         & .container {
@@ -181,7 +181,7 @@
 }
 
 @media (max-width: 1000px) {
-    .header__burger {
+    .CTUIH_header__burger {
         position: relative;
         display: block;
         float: right;
@@ -250,12 +250,12 @@
         }
     }
 
-    .header__logo {
+    .CTUIH_header__logo {
         margin-right: 0;
         border: 0;
     }
 
-    .header__nav {
+    .CTUIH_header__nav {
         position: absolute;
         right: 0;
         z-index: 10;
@@ -335,28 +335,28 @@
         }
     }
 
-    .header__login {
+    .CTUIH_header__login {
         margin: 5px;
     }
 }
 
 @media (max-width: 480px) {
-    .header {
+    .CTUIH_header {
         padding-top: 10px;
         padding-bottom: 10px;
     }
 
-    .header__logo img {
+    .CTUIH_header__logo img {
         max-height: 45px;
     }
 
-    .header__login {
+    .CTUIH_header__login {
         font-size: 14px;
     }
 }
 
 @media (max-width: 360px) {
-    .header__logo-media {
+    .CTUIH_header__logo-media {
         padding-right: 10px;
         margin-right: 10px;
     }

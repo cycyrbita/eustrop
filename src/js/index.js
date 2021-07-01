@@ -1,7 +1,7 @@
 window.onload = function () {
     /* Логика бургера начало*/
-    var burger = document.getElementById('js-header__burger'),
-        nav = document.getElementById('nav');
+    var burger = document.getElementById('js-CTUIH_header__burger'),
+        nav = document.getElementById('nav__dropdown');
 
     if (burger != null && nav != null) {
         burger.onclick = function () {
@@ -142,7 +142,7 @@ window.onload = function () {
     }
     /*логика блоков(home__list-item) на главной странице конец*/
 
-    var navSpan = document.querySelectorAll('.introList');
+    var navSpan = document.querySelectorAll('.CTUIH__navDropDown');
     if (navSpan != null) {
         for (var i = 0; i < navSpan.length; i++) {
             navSpan[i].onclick = function(e) {
