@@ -18,10 +18,12 @@ CTUIF_ - Классы в footer
 
 
 CTUI_
+
+CTUI_wiki - класс для div обрамляющего весь wiki-документ
 class=tabs__open 
             <h2 class="tabs__open"> CTUI_H_accordion
-            <div class="tabs__body"> CTUI_section
-                <div class="table"> CTUI_table
+            <div class="tabs__body"> CTUI_wiki_section
+                <div class="table"> CTUI_table - убираем?
 
 
 добавить классы
