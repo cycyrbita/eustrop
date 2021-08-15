@@ -18,6 +18,10 @@ CTUIF_ - Классы в footer
 
 
 CTUI_
+class=tabs__open 
+            <h2 class="tabs__open"> CTUI_H_accordion
+            <div class="tabs__body"> CTUI_section
+                <div class="table"> CTUI_table
 
 
 добавить классы
