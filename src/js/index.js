@@ -181,3 +181,10 @@ window.onload = function () {
         })
     }
 };
+
+$(document).ready(function() {
+    $('.qrcode').on('click', '.qrcode__menu-item', function() {
+        $('.qrcode__form').not($('.qrcode__form').eq($(this).index()).addClass('active')).removeClass('active')
+        $('.qrcode__menu-item').not($(this).addClass('active')).removeClass('active')
+    })
+})

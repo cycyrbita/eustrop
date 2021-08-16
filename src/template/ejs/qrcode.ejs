@@ -16,10 +16,10 @@
 							<div class="qrcode__menu">
 								<p>Закодировать:</p>
 								<div class="qrcode__menu-tab">
-									<div class="qrcode__menu-item">любой текст</div>
-									<div class="qrcode__menu-item active">ссылку на сайт</div>
-									<div class="qrcode__menu-item">визитную карточку</div>
-									<div class="qrcode__menu-item">sms-сообщение</div>
+									<div class="qrcode__menu-item">текст</div>
+									<div class="qrcode__menu-item active">ссылка</div>
+									<div class="qrcode__menu-item">визитка</div>
+									<div class="qrcode__menu-item">sms</div>
 								</div>
 							</div>
 							<form class="qrcode__form">
@@ -98,7 +98,7 @@
 									</div>
 								</div>
 							</form>
-							<form class="qrcode__form active">
+							<form class="qrcode__form">
 								<div class="qrcode__info qrcode__info_group">
 									<label class="qrcode__field">
 										<p>Имя: <small>Алексей</small></p>
@@ -216,13 +216,17 @@
 								<div class="qrcode__info-title">Что такое QR-код:</div>
 								<p>QR код «QR - Quick Response - Быстрый Отклик» — это двухмерный штрихкод (бар-код), предоставляющий информацию для быстрого ее распознавания с помощью камеры на мобильном телефоне.</p>
 								<p>При помощи QR-кода можно закодировать любую информацию, например: текст, номер телефона, ссылку на сайт или визитную карточку.</p>
-								<div class="qrcode__info-title">ЗДЕСЬ БУДЕТ ВАШ QR-КОД:</div>
+								<div class="qrcode__info-title">Здесь будет ваш QR-код:</div>
 								<div class="qrcode__result">
 									<div class="qrcode__result-media"><img src="" alt=""></div>
-									<p>HTML-код для вставки в блог:</p>
-									<input class="qrcode__result-html" value="http://qrcoder.ru/code/?SMSTO%3Agvj%3Avb&4&0"></input>
-									<p>HTML-код для вставки в блог:</p>
-									<input class="qrcode__result-link" value='<a href="http://qrcoder.ru" target="_blank"><img src="http://qrcoder.ru/code/?SMSTO%3Agvj%3Avb&4&0" width="116" height="116" border="0" title="QR код"></a>'></input>
+									<label class="qrcode__field">
+										<p>HTML-код для вставки в блог:</p>
+										<input class="qrcode__result-html" value="http://qrcoder.ru/code/?SMSTO%3Agvj%3Avb&4&0"></input>
+									</label>
+									<label class="qrcode__field">
+										<p>HTML-код для вставки в блог:</p>
+										<input class="qrcode__result-link" value='<a href="http://qrcoder.ru" target="_blank"><img src="http://qrcoder.ru/code/?SMSTO%3Agvj%3Avb&4&0" width="116" height="116" border="0" title="QR код"></a>'></input>
+									</label>
 								</div>
 							</div>
 						</div>
