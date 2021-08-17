@@ -50,21 +50,31 @@
     font-size: 14px;
     cursor: pointer;
     background-color: #efefef;
-    padding: 5px 5px;
-    border-radius: 5px;
+    padding: 10px 5px;
     text-align: center;
+    text-transform: uppercase;
+    -webkit-tap-highlight-color: transparent;
 
     &.active {
-        background-color: #ceffca;
+        background-color: #0075ff;
+        box-shadow: inset 0 0 7px 0px #5f5f5f;
+        color: #fff;
+        border-radius: 0;
     }
 
     & + & {
         margin-left: 10px;
     }
+
+    &:active {
+        transform: scale(0.98);
+    }
 }
 
 .qrcode__form {
     display: none;
+    background-color: #fafafa;
+    padding: 10px;
 
     &.active {
         display: block;
@@ -89,6 +99,7 @@
 .qrcode__info_group {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     flex-wrap: wrap;
 
     .qrcode__field {
@@ -120,8 +131,12 @@
     }
 
     & textarea {
-        min-height: 60px;
+        min-height: 90px;
         resize: none;
+    }
+
+    & input {
+        min-height: 30px;
     }
 }
 
@@ -136,6 +151,7 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    -webkit-tap-highlight-color: transparent;
 
     & > p {
         width: 100%;
@@ -179,15 +195,78 @@
 
 .qrcode__btn {
     padding: 10px 25px;
-    background-color: #efefef;
+    background-color: #0075ff;
     border-radius: 5px;
-    font-size: 15px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-tap-highlight-color: transparent;
 
-    &:hover {
-        background-color: #d8d8d8;
+    &:active {
+        transform: scale(0.98);
     }
 }
 
 .qrcode__info-title {
     margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .qrcode__body {
+        flex-direction: column;
+    }
+
+    .qrcode__box {
+        &:first-child {
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 30px;
+        }
+
+        &:last-child {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .qrcode__info-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .qrcode__btn {
+        font-size: 18px;
+        padding: 15px 10px;
+        flex: 0 0 auto;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .qrcode__menu-item {
+        padding: 15px 5px;
+
+        & + & {
+            margin-left: 5px;
+        }
+    }
+
+    .qrcode__field input {
+        min-height: 40px;
+        font-size: 18px;
+    }
+
+    .qrcode__size {
+        label {
+            width: 35px;
+            height: 35px;
+
+            input {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
 }
