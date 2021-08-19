@@ -55,7 +55,7 @@ window.onload = function () {
         }
     }
     /*Форма регистрации конец*/
-    
+
     /*логика блоков(home__list-item) на главной странице*/
     function addHeight(param) {
         var home = document.getElementsByClassName('home')[0];
@@ -71,27 +71,27 @@ window.onload = function () {
     var time = 100;
 
     function addShowAnimation() {
-        for(var i = 0; i < homeListItem.length; i++) {
+        for (var i = 0; i < homeListItem.length; i++) {
             time = getRandomArbitrary(100, 1000);
             setTime(i);
         }
     }
 
-    function removeShowAnimation () {
-        for(var i = 0; i < homeListItem.length; i++) {
+    function removeShowAnimation() {
+        for (var i = 0; i < homeListItem.length; i++) {
             time = getRandomArbitrary(100, 1000);
             setTimeRemove(i);
         }
     }
 
     function setTime(count) {
-        setTimeout (function() {
+        setTimeout(function () {
             homeListItem[count].classList.add('show');
         }, time);
     }
 
     function setTimeRemove(count) {
-        setTimeout (function() {
+        setTimeout(function () {
             homeListItem[count].classList.remove('show');
         }, time);
     }
@@ -115,7 +115,7 @@ window.onload = function () {
     }
 
     function showHome() {
-        window.onresize = function() {
+        window.onresize = function () {
             addHeight('home__list-item');
             addPaddingHome();
         }
@@ -125,7 +125,7 @@ window.onload = function () {
     }
 
     function hideHome() {
-        window.onresize = function() {
+        window.onresize = function () {
             removePaddingHome();
         }
         removeShowAnimation();
@@ -135,7 +135,7 @@ window.onload = function () {
     }
 
     if (document.getElementsByClassName('home').length) {
-        document.getElementsByClassName('home__show')[0].onclick = function() {
+        document.getElementsByClassName('home__show')[0].onclick = function () {
             showHome();
             this.remove();
         }
@@ -145,9 +145,9 @@ window.onload = function () {
     var navSpan = document.querySelectorAll('.CTUIH__navDropDown');
     if (navSpan != null) {
         for (var i = 0; i < navSpan.length; i++) {
-            navSpan[i].onclick = function(e) {
+            navSpan[i].onclick = function (e) {
                 e.stopPropagation();
-                if(this.classList.contains('open')) {
+                if (this.classList.contains('open')) {
                     this.classList.remove('open');
                 } else {
                     this.classList.add('open');
@@ -155,17 +155,17 @@ window.onload = function () {
             };
         }
     }
-    
+
     const anchors = document.querySelectorAll('a.docs__media-point');
     for (let anchor of anchors) {
         anchor.addEventListener('click', function (e) {
             let $items = document.querySelectorAll('.docs__item');
-            for(var i = 0; i < $items.length; i++) {
+            for (var i = 0; i < $items.length; i++) {
                 $items[i].classList.remove('docs__item_active');
             };
 
-            for(var i = 0; i < anchors.length; i++) {
-                if(anchors[i].classList.contains('docs__media-point_active')) {
+            for (var i = 0; i < anchors.length; i++) {
+                if (anchors[i].classList.contains('docs__media-point_active')) {
                     anchors[i].classList.remove('docs__media-point_active');
                 }
             };
@@ -183,8 +183,15 @@ window.onload = function () {
 };
 
 $(document).ready(function() {
-    $('.qrcode').on('click', '.qrcode__menu-item', function() {
-        $('.qrcode__form').not($('.qrcode__form').eq($(this).index()).addClass('active')).removeClass('active')
-        $('.qrcode__menu-item').not($(this).addClass('active')).removeClass('active')
+    var qrcode = new QRCode('qrcode');
+
+    $('.qrcode').on('click', '.qrcode__menu-item', function () {
+        $('.qrcode__form').not($('.qrcode__form').eq($(this).index()).addClass('active')).removeClass('active');
+        $('.qrcode__menu-item').not($(this).addClass('active')).removeClass('active');
     })
-})
+
+    $('.qrcode').on('click', '.qrcode__btn', function () {
+        var $info = $(this).parents('.qrcode__form').find('.qrcode__field textarea').val();
+        qrcode.makeCode($info);
+    })
+});
