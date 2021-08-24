@@ -192,6 +192,10 @@ $(document).ready(function() {
 
     $('.qrcode').on('click', '.qrcode__btn', function () {
         var $info = $(this).parents('.qrcode__form').find('.qrcode__field textarea').val();
-        qrcode.makeCode($info);
+        var $textarea = new QRCode("qrcode", {
+            correctLevel : QRCode.CorrectLevel.L
+        });
+        $textarea.clear();
+        $textarea.makeCode($info);
     })
 });
