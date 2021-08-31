@@ -191,11 +191,39 @@ $(document).ready(function() {
     })
 
     $('.qrcode').on('click', '.qrcode__btn', function () {
+        // чистим содержимое в котором будет код
+        $('.qrcode__result-media').html('');
+
+        // складываем инфу из поля
         var $info = $(this).parents('.qrcode__form').find('.qrcode__field textarea').val();
-        var $textarea = new QRCode("qrcode", {
-            correctLevel : QRCode.CorrectLevel.L
-        });
+
+        // узнаем размер
+        var size = $(this).parents('.qrcode__form').find('.qrcode__size input[type="radio"]:checked + span').text();
+
+        var $textarea;
+
+        if(size == 'L') {
+            $textarea = new QRCode("qrcode", {
+                correctLevel : QRCode.CorrectLevel.L
+            });
+        } else if (size == 'M') {
+            $textarea = new QRCode("qrcode", {
+                correctLevel : QRCode.CorrectLevel.M
+            });
+        } else if (size == 'Q') {
+            $textarea = new QRCode("qrcode", {
+                correctLevel : QRCode.CorrectLevel.Q
+            });
+        } else {
+            $textarea = new QRCode("qrcode", {
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        }
+
+        // чистим поле с кодом
         $textarea.clear();
+
+        // рисуюм код
         $textarea.makeCode($info);
     })
 });

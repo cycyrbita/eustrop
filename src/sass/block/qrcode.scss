@@ -162,16 +162,11 @@
     }
 
     & > label {
-        position: relative;
+        text-align: center;
         width: 25px;
-        height: 25px;
         cursor: pointer;
 
         & > span {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             font-size: 14px;
             cursor: pointer;
         }
@@ -180,17 +175,16 @@
             width: 25px;
             height: 25px;
             cursor: pointer;
-
-            &:checked + span {
-                color: #fff;
-                font-size: 12px;
-            }
         }
 
         & + label {
             margin-left: 7px;
         }
     }
+}
+
+.qrcode__result-media {
+    margin-bottom: 15px;
 }
 
 .qrcode__btn {
