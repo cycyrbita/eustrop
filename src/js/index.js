@@ -183,47 +183,24 @@ window.onload = function () {
 };
 
 $(document).ready(function() {
-    var qrcode = new QRCode('qrcode');
-
     $('.qrcode').on('click', '.qrcode__menu-item', function () {
         $('.qrcode__form').not($('.qrcode__form').eq($(this).index()).addClass('active')).removeClass('active');
         $('.qrcode__menu-item').not($(this).addClass('active')).removeClass('active');
     })
 
     $('.qrcode').on('click', '.qrcode__btn', function () {
-        // чистим содержимое в котором будет код
-        $('.qrcode__result-media').html('');
-
         // складываем инфу из поля
         var $info = $(this).parents('.qrcode__form').find('.qrcode__field textarea').val();
 
         // узнаем размер
         var size = $(this).parents('.qrcode__form').find('.qrcode__size input[type="radio"]:checked + span').text();
+        
+        var qr = qrcode(20, size);
 
-        var $textarea;
+        qr.addData($info);
 
-        if(size == 'L') {
-            $textarea = new QRCode("qrcode", {
-                correctLevel : QRCode.CorrectLevel.L
-            });
-        } else if (size == 'M') {
-            $textarea = new QRCode("qrcode", {
-                correctLevel : QRCode.CorrectLevel.M
-            });
-        } else if (size == 'Q') {
-            $textarea = new QRCode("qrcode", {
-                correctLevel : QRCode.CorrectLevel.Q
-            });
-        } else {
-            $textarea = new QRCode("qrcode", {
-                correctLevel : QRCode.CorrectLevel.H
-            });
-        }
+        qr.make();
 
-        // чистим поле с кодом
-        $textarea.clear();
-
-        // рисуюм код
-        $textarea.makeCode($info);
+        $('.qrcode__result-media').html(qr.createImgTag());
     })
 });
