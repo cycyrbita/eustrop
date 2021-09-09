@@ -188,9 +188,62 @@ $(document).ready(function() {
         $('.qrcode__menu-item').not($(this).addClass('active')).removeClass('active');
     })
 
-    $('.qrcode').on('click', '.qrcode__btn', function () {
+    $('.qrcode').on('click', '#qrcode_bt1', function () {
         // складываем инфу из поля
         var $info = $(this).parents('.qrcode__form').find('.qrcode__field textarea').val();
+
+        // узнаем размер
+        var size = $(this).parents('.qrcode__form').find('.qrcode__size input[type="radio"]:checked + span').text();
+        
+        var qr = qrcode(20, size);
+
+        qr.addData($info);
+
+        qr.make();
+
+        $('.qrcode__result-media').html(qr.createImgTag());
+    })
+
+    $('.qrcode').on('click', '#qrcode_bt2', function () {
+        // складываем инфу из поля
+        var $info = $(this).parents('.qrcode__form').find('.qrcode__field input').val();
+
+        // узнаем размер
+        var size = $(this).parents('.qrcode__form').find('.qrcode__size input[type="radio"]:checked + span').text();
+        
+        var qr = qrcode(20, size);
+
+        qr.addData($info);
+
+        qr.make();
+
+        $('.qrcode__result-media').html(qr.createImgTag());
+    })
+
+    $('.qrcode').on('click', '#qrcode_bt3', function () {
+        // складываем инфу из поля
+        var $info = '';
+        var arr = $(this).parents('.qrcode__form').find('.qrcode__field input');
+        $.each(arr, function(i) {
+            $info += arr[i].value;
+        })
+
+        // узнаем размер
+        var size = $(this).parents('.qrcode__form').find('.qrcode__size input[type="radio"]:checked + span').text();
+        
+        var qr = qrcode(20, size);
+
+        qr.addData($info);
+
+        qr.make();
+
+        $('.qrcode__result-media').html(qr.createImgTag());
+    })
+
+    $('.qrcode').on('click', '#qrcode_bt4', function () {
+        // складываем инфу из поля
+        var $info = $(this).parents('.qrcode__form').find('.qrcode__field input').val();
+        $info += $(this).parents('.qrcode__form').find('.qrcode__field textarea').val();
 
         // узнаем размер
         var size = $(this).parents('.qrcode__form').find('.qrcode__size input[type="radio"]:checked + span').text();
