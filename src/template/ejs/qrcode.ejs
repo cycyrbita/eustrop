@@ -201,14 +201,28 @@
 					</div> -->
 
 					<div class="test">
-						<input type="text" class="test__size">
-						<input type="radio" name="count" checked>
-						<input type="radio" name="count" value="L">
-						<input type="radio" name="count" value="M">
-						<input type="radio" name="count" value="Q">
-						<input type="radio" name="count" value="H">
+						<input type="text" class="test__text" placeholder="тут пишем текст">
+						<input type="number" class="test__width" placeholder="ширина и высота qrcode">
+						<input type="number" class="test__size" min="0" max="40" placeholder="размер (0-40)">
+						<label>
+							<p>L</p>
+							<input type="radio" name="count" value="L" checked>
+						</label>
+						<label>
+							<p>M</p>
+							<input type="radio" name="count" value="M">
+						</label>
+						<label>
+							<p>Q</p>
+							<input type="radio" name="count" value="Q">
+						</label>
+						<label>
+							<p>H</p>
+							<input type="radio" name="count" value="H">
+						</label>
+						<div class="test__result"></div>
+						<div class="test__git"><a target="_blank" href="https://github.com/kazuhikoarase/qrcode-generator/tree/master/js">Ссылка на скрипт github</a></div>
 					</div>
-					
 				</div>
 			</div>
 		</div>

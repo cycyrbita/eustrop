@@ -188,72 +188,27 @@ $(document).ready(function() {
         $('.qrcode__menu-item').not($(this).addClass('active')).removeClass('active');
     })
 
-    $('.qrcode').on('click', '#qrcode_bt1', function () {
-        // складываем инфу из поля
-        var $info = $(this).parents('.qrcode__form').find('.qrcode__field textarea').val();
-
-        // узнаем размер
-        var size = $(this).parents('.qrcode__form').find('.qrcode__size input[type="radio"]:checked + span').text();
+    $('.test').on('change', 'input', function () {
+        // узнаем текст
+        var info = $('.test__text').val();
+        // узнаем номер(0-40)
+        var typeNumber = $('.test__size').val();
+        if(typeNumber < 0) {
+            typeNumber = 0;
+        } else if(typeNumber > 40) {
+            typeNumber = 40;
+        }
+        // узнаем размер(L,M,Q,H)
+        var errorCorrectionLevel = $('input[type="radio"]:checked').val();
+        // узнаем размер картинки(qrcode)
+        var cellSize = $('.test__width').val();
         
-        var qr = qrcode(20, size);
+        var qr = qrcode(typeNumber, errorCorrectionLevel);
 
-        qr.addData($info);
+        qr.addData(info);
 
         qr.make();
 
-        $('.qrcode__result-media').html(qr.createImgTag());
-    })
-
-    $('.qrcode').on('click', '#qrcode_bt2', function () {
-        // складываем инфу из поля
-        var $info = $(this).parents('.qrcode__form').find('.qrcode__field input').val();
-
-        // узнаем размер
-        var size = $(this).parents('.qrcode__form').find('.qrcode__size input[type="radio"]:checked + span').text();
-        
-        var qr = qrcode(20, size);
-
-        qr.addData($info);
-
-        qr.make();
-
-        $('.qrcode__result-media').html(qr.createImgTag());
-    })
-
-    $('.qrcode').on('click', '#qrcode_bt3', function () {
-        // складываем инфу из поля
-        var $info = '';
-        var arr = $(this).parents('.qrcode__form').find('.qrcode__field input');
-        $.each(arr, function(i) {
-            $info += arr[i].value;
-        })
-
-        // узнаем размер
-        var size = $(this).parents('.qrcode__form').find('.qrcode__size input[type="radio"]:checked + span').text();
-        
-        var qr = qrcode(20, size);
-
-        qr.addData($info);
-
-        qr.make();
-
-        $('.qrcode__result-media').html(qr.createImgTag());
-    })
-
-    $('.qrcode').on('click', '#qrcode_bt4', function () {
-        // складываем инфу из поля
-        var $info = $(this).parents('.qrcode__form').find('.qrcode__field input').val();
-        $info += $(this).parents('.qrcode__form').find('.qrcode__field textarea').val();
-
-        // узнаем размер
-        var size = $(this).parents('.qrcode__form').find('.qrcode__size input[type="radio"]:checked + span').text();
-        
-        var qr = qrcode(20, size);
-
-        qr.addData($info);
-
-        qr.make();
-
-        $('.qrcode__result-media').html(qr.createImgTag());
+        $('.test__result').html(qr.createImgTag(cellSize, 0));
     })
 });
