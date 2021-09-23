@@ -31,7 +31,6 @@ gulp.task('sass', function () {
 gulp.task('js', function () {
   return gulp.src('src/js/plugin/**/*.js')
     .pipe(concat('plugin.js'))
-    .pipe(uglify())
     .pipe(gulp.dest('src/js'));
 });
 

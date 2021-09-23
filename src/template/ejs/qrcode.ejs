@@ -8,222 +8,136 @@
 		<div class="page__body">
 			<div class="container">
 				<div class="qrcode">
-					<!-- <div class="qrcode__head">
-						<div class="qrcode__title">Генератор QR кодов</div>
-					</div>
-					<div class="qrcode__body">
-						<div class="qrcode__box">
-							<div class="qrcode__menu">
-								<p>Закодировать:</p>
-								<div class="qrcode__menu-tab">
-									<div class="qrcode__menu-item active">текст</div>
-									<div class="qrcode__menu-item">ссылка</div>
-									<div class="qrcode__menu-item">визитка</div>
-									<div class="qrcode__menu-item">sms</div>
-								</div>
-							</div>
-							<form class="qrcode__form active">
-								<div class="qrcode__info">
-									<label class="qrcode__field">
-										<p>введите текст для кодирования:</p>
-										<textarea></textarea>
-									</label>
-									<div class="qrcode__info-footer">
-										<div class="qrcode__size">
-											<p>размер:</p>
-											<label>
-												<input type="radio" name="count" checked>
-												<span>L</span>
-											</label>
-											<label>
-												<input type="radio" name="count">
-												<span>M</span>
-											</label>
-											<label>
-												<input type="radio" name="count">
-												<span>Q</span>
-											</label>
-											<label>
-												<input type="radio" name="count">
-												<span>H</span>
-											</label>
-										</div>
-										<buttom type="submit" class="qrcode__btn" id="qrcode_bt1">Создать код</buttom>
-									</div>
-								</div>
-							</form>
-							<form class="qrcode__form">
-								<div class="qrcode__info">
-									<label class="qrcode__field">
-										<p>введите url:</p>
-										<input type="text">
-									</label>
-									<div class="qrcode__info-footer">
-										<div class="qrcode__size">
-											<p>размер:</p>
-											<label>
-												<input type="radio" name="count" checked>
-												<span>L</span>
-											</label>
-											<label>
-												<input type="radio" name="count">
-												<span>M</span>
-											</label>
-											<label>
-												<input type="radio" name="count">
-												<span>Q</span>
-											</label>
-											<label>
-												<input type="radio" name="count">
-												<span>H</span>
-											</label>
-										</div>
-										<buttom type="submit" class="qrcode__btn" id="qrcode_bt2">Создать код</buttom>
-									</div>
-								</div>
-							</form>
-							<form class="qrcode__form">
-								<div class="qrcode__info qrcode__info_group">
-									<label class="qrcode__field">
-										<p>Имя: <small>Алексей</small></p>
-										<input type="text">
-									</label>
-									<label class="qrcode__field">
-										<p>Фамилия: <small>Иванов</small></p>
-										<input type="text">
-									</label>
-									<label class="qrcode__field">
-										<p>Телефон: <small>+74951234567</small></p>
-										<input type="text">
-									</label>
-									<label class="qrcode__field">
-										<p>e-mail: <small>ivanov@mail.ru</small></p>
-										<input type="text">
-									</label>
-									<label class="qrcode__field">
-										<p>Организация: <small>Рога и Копыта</small></p>
-										<input type="text">
-									</label>
-									<label class="qrcode__field">
-										<p>Должность: <small>Генеральный директор</small></p>
-										<input type="text">
-									</label>
-									<label class="qrcode__field">
-										<p>Адрес: <small>Москва, ул. Ленина, д. 57</small></p>
-										<input type="text">
-									</label>
-									<label class="qrcode__field">
-										<p>Адрес сайта: <small>http://yandex.ru</small></p>
-										<input type="text">
-									</label>
-									<label class="qrcode__field">
-										<p>Заметка: <small>Москва, ул. Ленина, д. 57</small></p>
-										<input type="text">
-									</label>
-									<div class="qrcode__info-footer">
-										<div class="qrcode__size">
-											<p>размер:</p>
-											<label>
-												<input type="radio" name="count" checked>
-												<span>L</span>
-											</label>
-											<label>
-												<input type="radio" name="count">
-												<span>M</span>
-											</label>
-											<label>
-												<input type="radio" name="count">
-												<span>Q</span>
-											</label>
-											<label>
-												<input type="radio" name="count">
-												<span>H</span>
-											</label>
-										</div>
-										<buttom type="submit" class="qrcode__btn" id="qrcode_bt3">Создать код</buttom>
-									</div>
-								</div>
-							</form>
-							<form class="qrcode__form">
-								<div class="qrcode__info">
-									<label class="qrcode__field">
-										<p>Номер телефона:</p>
-										<input type="text">
-									</label>
-									<label class="qrcode__field">
-										<p>Текст sms-сообщения:</p>
-										<textarea></textarea>
-									</label>
-									<div class="qrcode__info-footer">
-										<div class="qrcode__size">
-											<p>размер:</p>
-											<label>
-												<input type="radio" name="count" checked>
-												<span>L</span>
-											</label>
-											<label>
-												<input type="radio" name="count">
-												<span>M</span>
-											</label>
-											<label>
-												<input type="radio" name="count">
-												<span>Q</span>
-											</label>
-											<label>
-												<input type="radio" name="count">
-												<span>H</span>
-											</label>
-										</div>
-										<buttom type="submit" class="qrcode__btn"  id="qrcode_bt4">Создать код</buttom>
-									</div>
-								</div>
-							</form>
+					<div class="qrcode__title">Генератор qrcode</div>
+					<form class="qrcode__form">
+						<div class="qrcode__menu">
+							<div class="qrcode__menu-item active" data-items="qr1">Текст</div>
+							<div class="qrcode__menu-item" data-items="qr2">Url</div>
+							<div class="qrcode__menu-item" data-items="qr3">Визитка</div>
+							<div class="qrcode__menu-item" data-items="qr4">Sms</div>
+							<div class="qrcode__menu-item" data-items="qr5">Еще что-то</div>
 						</div>
-						<div class="qrcode__box">
-							<div class="qrcode__info">
-								<div class="qrcode__info-title">Что такое QR-код:</div>
-								<p>QR код «QR - Quick Response - Быстрый Отклик» — это двухмерный штрихкод (бар-код), предоставляющий информацию для быстрого ее распознавания с помощью камеры на мобильном телефоне.</p>
-								<p>При помощи QR-кода можно закодировать любую информацию, например: текст, номер телефона, ссылку на сайт или визитную карточку.</p>
-								<div class="qrcode__info-title">Здесь будет ваш QR-код:</div>
-								<div class="qrcode__result">
-									<div class="qrcode__result-media"></div>
-									<label class="qrcode__field">
-										<p>HTML-код для вставки в блог:</p>
-										<input class="qrcode__result-html" value="http://qrcoder.ru/code/?SMSTO%3Agvj%3Avb&4&0"></input>
-									</label>
-									<label class="qrcode__field">
-										<p>HTML-код для вставки в блог:</p>
-										<input class="qrcode__result-link" value='<a href="http://qrcoder.ru" target="_blank"><img src="http://qrcoder.ru/code/?SMSTO%3Agvj%3Avb&4&0" width="116" height="116" border="0" title="QR код"></a>'></input>
-									</label>
-								</div>
+						<div class="qrcode__body">
+							<div class="qrcode__body-item visible">
+								<label class="qrcode__label">
+									<p>Введите текст</p>
+									<textarea name="qr1-text" class="qrcode__textarea"></textarea>
+								</label>
+							</div>
+							<div class="qrcode__body-item">
+								<label class="qrcode__label">
+									<p>Введите url</p>
+									<input name="qr2-url" type="text" class="qrcode__field">
+								</label>
+							</div>
+							<div class="qrcode__body-item qrcode__body-item_group">
+								<label class="qrcode__label">
+									<p>Имя</p>
+									<input name="qr3-name" type="text" class="qrcode__field">
+								</label>
+								<label class="qrcode__label">
+									<p>Фамилия</p>
+									<input name="qr3-surname" type="text" class="qrcode__field">
+								</label>
+								<label class="qrcode__label">
+									<p>Телефон</p>
+									<input name="qr3-phone" type="text" class="qrcode__field">
+								</label>
+								<label class="qrcode__label">
+									<p>E-mail</p>
+									<input name="qr3-email" type="text" class="qrcode__field">
+								</label>
+								<label class="qrcode__label">
+									<p>Организация</p>
+									<input name="qr3-organization" type="text" class="qrcode__field">
+								</label>
+								<label class="qrcode__label">
+									<p>Должность</p>
+									<input name="qr3-position" type="text" class="qrcode__field">
+								</label>
+								<label class="qrcode__label">
+									<p>Адрес</p>
+									<input name="qr3-address" type="text" class="qrcode__field">
+								</label>
+								<label class="qrcode__label">
+									<p>Сайт</p>
+									<input name="qr3-site" type="text" class="qrcode__field">
+								</label>
+								<label class="qrcode__label">
+									<p>Заметка</p>
+									<input name="qr3-metka" type="text" class="qrcode__field">
+								</label>
+							</div>
+							<div class="qrcode__body-item">
+								<label class="qrcode__label">
+									<p>Номер телефона</p>
+									<input name="qr4-phone" type="text" class="qrcode__field">
+								</label>
+								<label class="qrcode__label">
+									<p>Текст sms-сообщения</p>
+									<textarea name="qr4-sms"  class="qrcode__textarea"></textarea>
+								</label>
 							</div>
 						</div>
-					</div> -->
-
-					<div class="test">
-						<input type="text" class="test__text" placeholder="тут пишем текст">
-						<input type="number" class="test__width" placeholder="ширина и высота qrcode">
-						<input type="number" class="test__size" min="0" max="40" placeholder="размер (0-40)">
-						<label>
-							<p>L</p>
-							<input type="radio" name="count" value="L" checked>
-						</label>
-						<label>
-							<p>M</p>
-							<input type="radio" name="count" value="M">
-						</label>
-						<label>
-							<p>Q</p>
-							<input type="radio" name="count" value="Q">
-						</label>
-						<label>
-							<p>H</p>
-							<input type="radio" name="count" value="H">
-						</label>
-						<div class="test__result"></div>
-						<div class="test__git"><a target="_blank" href="https://github.com/kazuhikoarase/qrcode-generator/tree/master/js">Ссылка на скрипт github</a></div>
-					</div>
+						<div class="qrcode__type">
+							<label class="qrcode__type-label">
+								<p>L</p>
+								<input type="radio" name="qr-type" value="L" checked>
+							</label>
+							<label class="qrcode__type-label">
+								<p>M</p>
+								<input type="radio" name="qr-type" value="M">
+							</label>
+							<label class="qrcode__type-label">
+								<p>Q</p>
+								<input type="radio" name="qr-type" value="Q">
+							</label>
+							<label class="qrcode__type-label">
+								<p>H</p>
+								<input type="radio" name="qr-type" value="H">
+							</label>
+						</div>
+						<div class="qrcode__widthImg">
+							<label class="qrcode__label">
+								<p>Размер картинки</p>
+								<input class="qrcode__field" name="qr-widht" type="number">
+							</label>
+						</div>
+						<div class="qrcode__size">
+							<label class="qrcode__label">
+								<p>Жирность</p>
+								<input class="qrcode__field" name="qr-size" type="number" min="0" max="40">
+							</label>
+						</div>
+						<div class="qrcode__btn">
+							<button type="submit">Сгенерировать</button>
+						</div>
+					</form>
+					<div class="qrcode__result"></div>
 				</div>
+				<!-- <div class="test">
+					<input type="text" class="test__text" placeholder="тут пишем текст">
+					<input type="number" class="test__width" placeholder="ширина и высота qrcode">
+					<input type="number" class="test__size" min="0" max="40" placeholder="размер (0-40)">
+					<label>
+						<p>L</p>
+						<input type="radio" name="count" value="L" checked>
+					</label>
+					<label>
+						<p>M</p>
+						<input type="radio" name="count" value="M">
+					</label>
+					<label>
+						<p>Q</p>
+						<input type="radio" name="count" value="Q">
+					</label>
+					<label>
+						<p>H</p>
+						<input type="radio" name="count" value="H">
+					</label>
+					<div class="test__result"></div>
+					<div class="test__git"><a target="_blank" href="https://github.com/kazuhikoarase/qrcode-generator/tree/master/js">Ссылка на скрипт github</a></div>
+				</div> -->
 			</div>
 		</div>
 		<%- include('block/footer') %>
