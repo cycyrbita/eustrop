@@ -67,7 +67,7 @@
 					<div class="qrcode__settings">
 						<div>
 							<label class="active">
-								<input type="radio" name="qr_type" value="L">
+								<input type="radio" name="qr_type" value="L" checked>
 								<p>L</p>
 							</label>
 							<label>
@@ -84,11 +84,12 @@
 							</label>
 						</div>
 						<p>Размер картинки:</p>
-						<input type="text" name="qr_size">
+						<input type="text" name="qr_size" value="5">
 						<p>Жирность:</p>
-						<input type="text" name="qr_weight">
+						<input type="text" name="qr_weight" value="8">
 					</div>
 					<button type="submit">Сгенерировать</button>
+					<div id="qrcode__result"></div>
 				</form>
 				
 			</div>
