@@ -10,8 +10,8 @@
 				<form id="qrcode" class="qrcode">
 					<div class="qrcode__nav">
 						<label class="active">
-							<input type="radio" name="qr_nav" value="qr1">
-							<p>Текст:</p>
+							<input type="radio" name="qr_nav" value="qr1" checked>
+							<p>Имя и сообщение:</p>
 						</label>
 						<label>
 							<input type="radio" name="qr_nav" value="qr2">
@@ -84,12 +84,13 @@
 							</label>
 						</div>
 						<p>Размер картинки:</p>
-						<input type="text" name="qr_size" value="5">
+						<input type="number" name="qr_size" value="5">
 						<p>Жирность:</p>
-						<input type="text" name="qr_weight" value="8">
+						<input type="number" name="qr_weight" value="3" min="0" max="40">
 					</div>
 					<button type="submit">Сгенерировать</button>
 					<div id="qrcode__result"></div>
+					<div id="qrcode__info"></div>
 				</form>
 				
 			</div>

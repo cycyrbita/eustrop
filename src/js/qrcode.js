@@ -96,57 +96,13 @@ window.onload = function () {
                     }
                 }
 
-                let qr = qrcode(qr_size, qr_type);
+                let qr = qrcode(qr_weight, qr_type);
                 qr.addData(qr_info);
                 qr.make();
-                document.getElementById('qrcode__result').innerHTML = qr.createImgTag(qr_weight, 0);
+                document.getElementById('qrcode__result').innerHTML = qr.createImgTag(qr_size, 0);
+                document.getElementById('qrcode__info').innerHTML = '<div>'+qr_info+'</div>';
+                arr = [];
             }
         }
     }
 }
-
-
-
-
-
-
-
-
-
-$(document).ready(function() {
-    $('.qrcode__form').submit(function(e) {
-        e.preventDefault();
-
-        // узнаем тип(L,M,Q,H)
-        let type = $('input[name="qr-type"]:checked').val();
-
-        // узнаем размер картинки(qrcode)
-        let width = $('input[name="qr-widht"]').val();
-
-        // узнаем жирность(0-40)
-        let size = $('input[name="qr-size"]').val();
-        if(size < 0) {
-            size = 0;
-        } else if(size > 40) {
-            size = 40;
-        }
-
-        if(items == 'qr1') {
-            qr1(type, width, size);
-        } else if(items == 'qr2') {
-            qr2(type, width, size);
-        } else if(items == 'qr3') {
-            qr3(type, width, size);
-        } else if(items == 'qr4') {
-            qr4(type, width, size);
-        }
-    })
-
-    function qr1(type, width, size) {
-        let text = $('textarea[name="qr1-text"]').val();
-        let qr = qrcode(size, type);
-        qr.addData(text);
-        qr.make();
-        $('.qrcode__result').html(qr.createImgTag(width, 0));
-    }
-});

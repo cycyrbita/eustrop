@@ -19,6 +19,15 @@
         margin-bottom: 15px;
     }
 
+    input[type="number"] {
+        display: block;
+        width: 100%;
+        border: 1px solid #dcdcdc;
+        height: 36px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
     textarea {
         display: block;
         width: 100%;
@@ -126,4 +135,20 @@
             display: block;
         }
     }
+}
+
+#qrcode__result {
+    margin-top: 15px;
+    text-align: center;
+
+    img {
+        display: inline-block;
+    }
+}
+
+#qrcode__info {
+    padding: 15px;
+    background-color: #fff;
+    margin-top: 15px;
+    text-align: center;
 }
