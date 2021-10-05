@@ -1,12 +1,16 @@
 window.onload = function () {
-    activeNav();
+    activeNav('qrcode');
     activeType();
     let infoForm = [];
     dataForm('qrcode', infoForm);
     
 
     // делаем активными пункты меню
-    function activeNav() {
+    function activeNav(idForm) {
+        // чистим форму
+        let myForm = document.getElementById(idForm);
+
+        // собираем информацию с формы
         let elem = document.querySelectorAll('.qrcode__nav label input');
         let label = document.querySelectorAll('.qrcode__nav label');
         let indexField = document.querySelectorAll('.qrcode__body > div');
@@ -26,6 +30,16 @@ window.onload = function () {
                 }
                 elem[i].closest('label').classList.add('active');
                 indexField[i].classList.add('visible');
+
+                let fields = document.querySelectorAll(`#${idForm} input, #${idForm} textarea, #${idForm} select`);
+
+                for(let g = 0; g < fields.length; g++) {
+                    if(fields[g].name != 'qr_nav' && fields[g].name != 'qr_size' && fields[g].name != 'qr_weight' && fields[g].name != 'qr_type') {
+                        fields[g].value = '';
+                        document.getElementById('qrcode__result').innerHTML = '';
+                        document.getElementById('qrcode__info').innerHTML = '';
+                    }
+                }
             });
         }
     }
@@ -91,7 +105,7 @@ window.onload = function () {
                         qr_weight = arr[i][1];
                     }
 
-                    if(arr[i][0] != 'qr_type' && arr[i][0] != 'qr_size' && arr[i][0] != 'qr_weight') {
+                    if(arr[i][0] != 'qr_type' && arr[i][0] != 'qr_size' && arr[i][0] != 'qr_weight' && arr[i][0] != 'qr_nav') {
                         qr_info = qr_info + "\n" + arr[i][1];
                     }
                 }
