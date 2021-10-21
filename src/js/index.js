@@ -1,4 +1,4 @@
-window.onload = function () {
+window.addEventListener("load", function () {
     /* Логика бургера начало*/
     var burger = document.getElementById('CTUIH_header__burger'),
         nav = document.getElementById('nav__dropdown');
@@ -180,4 +180,4 @@ window.onload = function () {
             })
         })
     }
-};
+});
