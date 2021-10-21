@@ -11,57 +11,65 @@
 					<div class="qrcode__nav">
 						<label class="active">
 							<input type="radio" name="qr_nav" value="qr1" checked>
-							<p>Имя и сообщение:</p>
+							<p>Форма ручного поиска здесь:</p>
 						</label>
 						<label>
 							<input type="radio" name="qr_nav" value="qr2">
-							<p>URL:</p>
+							<p>ТЕКСТ:</p>
 						</label>
 						<label>
 							<input type="radio" name="qr_nav" value="qr3">
-							<p>ВИЗИТКА:</p>
+							<p>URL:</p>
 						</label>
 						<label>
 							<input type="radio" name="qr_nav" value="qr4">
+							<p>ВИЗИТКА:</p>
+						</label>
+						<label>
+							<input type="radio" name="qr_nav" value="qr5">
 							<p>SMS:</p>
 						</label>
 					</div>
 					<div class="qrcode__body">
 						<div class="visible">
-							<p>Имя:</p>
-							<input type="text" name="qr1_name">
+							<p>Код:</p>
+							<input type="text" name="qr1_qr">
+							<p>Pin:</p>
+							<input type="text" name="qr1_pin">
+						</div>
+						<div>
 							<p>Сообщение:</p>
-							<textarea name="qr1_text"></textarea>
+							<textarea name="qr2_text"></textarea>
 						</div>
 						<div>
 							<p>Url:</p>
-							<input type="text" name="qr2_url">
+							<input type="text" name="qr3_url">
 						</div>
 						<div>
 							<p>Имя:</p>
-							<input type="text" name="qr3_name">
+							<input type="text" name="qr4_name">
 							<p>Фамилия:</p>
-							<input type="text" name="qr3_surname">
+							<input type="text" name="qr4_surname">
 							<p>Телефон:</p>
-							<input type="text" name="qr3_phone">
+							<input type="text" name="qr4_phone">
 							<p>E-mail:</p>
-							<input type="text" name="qr3_mail">
+							<input type="text" name="qr4_mail">
 							<p>Организация:</p>
-							<input type="text" name="qr3_organization">
+							<input type="text" name="qr4_organization">
 							<p>Должность:</p>
-							<input type="text" name="qr3_position">
+							<input type="text" name="qr4_position">
 							<p>Адрес:</p>
-							<input type="text" name="qr3_adres">
+							<input type="text" name="qr4_adres">
 							<p>Сайт:</p>
-							<input type="text" name="qr3_site">
+							<input type="text" name="qr4_site">
 							<p>Заметка:</p>
-							<input type="text" name="qr3_metka">
+							<input type="text" name="qr4_metka">
 						</div>
 						<div>
 							<p>Номер телефона:</p>
-							<input type="text" name="qr4_phone">
+							<input type="text" name="qr5_phone">
 							<p>Текст sms-сообщения:</p>
-							<textarea name="qr4_sms"></textarea>
+							<textarea name="qr5_sms"></textarea>
 						</div>
 					</div>
 					<div class="qrcode__settings">
@@ -85,8 +93,6 @@
 						</div>
 						<p>Размер картинки:</p>
 						<input type="number" name="qr_size" value="5">
-						<p>Жирность:</p>
-						<input type="number" name="qr_weight" value="40" min="0" max="40">
 					</div>
 					<button type="submit">Сгенерировать</button>
 					<div id="qrcode__result"></div>

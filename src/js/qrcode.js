@@ -86,7 +86,6 @@ window.onload = function () {
 
                 let qr_type = '',
                     qr_size = '',
-                    qr_weight = '',
                     qr_info = '';
 
                 for(let i = 0; i < arr.length; i++) {
@@ -101,16 +100,13 @@ window.onload = function () {
                             qr_size = 40;
                         }
                     }
-                    if(arr[i][0] == 'qr_weight') {
-                        qr_weight = arr[i][1];
-                    }
 
-                    if(arr[i][0] != 'qr_type' && arr[i][0] != 'qr_size' && arr[i][0] != 'qr_weight' && arr[i][0] != 'qr_nav') {
+                    if(arr[i][0] != 'qr_type' && arr[i][0] != 'qr_size' && arr[i][0] != 'qr_nav') {
                         qr_info = qr_info + "\n" + arr[i][1];
                     }
                 }
 
-                let qr = qrcode(qr_weight, qr_type);
+                let qr = qrcode(0, qr_type);
                 qr.addData(qr_info);
                 qr.make();
                 document.getElementById('qrcode__result').innerHTML = qr.createImgTag(qr_size, 0);
