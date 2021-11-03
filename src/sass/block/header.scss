@@ -63,6 +63,7 @@
         display: block;
         position: relative;
         list-style-type: none;
+        vertical-align: top;
 
         &:hover {
             & > ul {

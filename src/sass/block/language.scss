@@ -1,0 +1,48 @@
+
+.language {
+    position: relative;
+
+    & > p {
+        display: inline-block;
+        background-color: #4092d6;
+        padding: 5px 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        color: #fff;
+        cursor: default;
+    }
+
+    &:hover {
+        .language__all {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.language__all {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    opacity: 0;
+    transition: .6s opacity;
+
+    & > div {
+        padding: 5px 10px;
+        line-height: 1;
+        font-size: 14px;
+        color: #519ddc;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #4092d6;
+            color: #fff;
+        }
+    }
+}
