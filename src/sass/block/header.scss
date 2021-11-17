@@ -6,8 +6,12 @@
     border-bottom: 1px solid #dedede;
 }
 
+.CTUIH_header__body {
+    text-align: right;
+}
+
 .CTUIH_header__logo {
-    display: inline-block;
+    float: left;
     text-decoration: none;
 
     & span {
@@ -56,8 +60,8 @@
 }
 
 .CTUIH_header__nav {
-    float: right;
-    margin-top: 4px;
+    display: inline-block;
+    vertical-align: middle;
 
     & li {
         display: block;
@@ -245,6 +249,10 @@
                 }
             }
         }
+    }
+
+    .CTUIH_header__body {
+        min-height: 34px;
     }
 
     .CTUIH_header__logo {

@@ -1,4 +1,14 @@
 window.addEventListener("load", function () {
+    // копируем навигацию
+    var mynav = document.getElementById('nav__dropdown').cloneNode(true);
+
+    // удаляем навигацию из футера
+    document.getElementById('nav__dropdown').remove();
+
+    // вставляем навигацию в шапку
+    document.getElementById('CTUIH_logo').after(mynav);
+
+
     /* Логика бургера начало*/
     var burger = document.getElementById('CTUIH_header__burger'),
         nav = document.getElementById('nav__dropdown');

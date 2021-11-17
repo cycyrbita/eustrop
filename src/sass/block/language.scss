@@ -1,6 +1,8 @@
 
 .language {
     position: relative;
+    display: inline-block;
+    vertical-align: middle;
 
     & > p {
         display: inline-block;
@@ -44,5 +46,12 @@
             background-color: #4092d6;
             color: #fff;
         }
+    }
+}
+
+@media (max-width: 1000px) {
+    .language {
+        margin-top: 3px;
+        margin-right: 30px;
     }
 }
