@@ -1,13 +1,16 @@
 .form {
   padding: 30px;
-  background-color: #f1f1f1; }
+  background-color: #f1f1f1;
+}
 
 .form label {
-  display: block; }
+  display: block;
+}
 
 .form label + label {
   display: block;
-  margin-top: 20px; }
+  margin-top: 20px;
+}
 
 .form input,
 .form textarea,
@@ -15,18 +18,21 @@
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 0; }
+  border: 0;
+}
 
 .form textarea {
   resize: vertical;
-  min-height: 80px; }
+  min-height: 80px;
+}
 
 .form p {
   margin-top: 5px;
   margin-bottom: 0;
   font-size: 14px;
   font-style: italic;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+}
 
 .form button {
   display: inline-block;
@@ -37,42 +43,50 @@
   font-size: 16px;
   background-color: #56a5d0;
   opacity: 0.8;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .form button:hover {
-  opacity: 1; }
+  opacity: 1;
+}
 
 .form input[type="checkbox"] {
   width: 20px;
   height: 20px;
   vertical-align: middle;
-  margin: 0; }
+  margin: 0;
+}
 
 .form input[type="checkbox"] + p {
   display: inline;
   vertical-align: middle;
-  font-style: normal; }
+  font-style: normal;
+}
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #2d80af;
   font-size: 14px;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+}
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
   color: #2d80af;
   font-size: 14px;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+}
 
 input:-moz-placeholder,
 textarea:-moz-placeholder {
   color: #2d80af;
   font-size: 14px;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+}
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #2d80af;
   font-size: 14px;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+}

@@ -11,7 +11,7 @@ var browserSync = require('browser-sync'),
     gcmq = require('gulp-group-css-media-queries'); // комбинирует стили
 
 gulp.task('gcmq', function () {
-    return gulp.src('src/css/style.css')
+    return gulp.src('src/css/*.css')
         .pipe(gcmq())
         .pipe(gulp.dest('src/css'))
         .pipe(browserSync.stream());
