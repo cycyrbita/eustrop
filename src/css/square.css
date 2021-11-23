@@ -1,0 +1,58 @@
+.square + .square {
+  margin-top: 30px; }
+
+.body-square {
+  background-color: #1e2731; }
+
+.square__title {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #fff; }
+
+.square__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: -2.5px; }
+
+.square__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 100px;
+  height: 100px;
+  margin: 2.5px;
+  overflow: hidden;
+  background-color: #218ee8;
+  border: 2px solid transparent;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
+  .square__item.gray {
+    background-color: #414952; }
+  .square__item:hover {
+    border-color: rgba(255, 255, 255, 0.6); }
+  .square__item img {
+    max-width: 45%;
+    max-height: 45%; }
+
+.square__description {
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  bottom: 0;
+  padding: 5px;
+  color: #fff;
+  font-size: 12px; }

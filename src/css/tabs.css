@@ -1,0 +1,31 @@
+.tabs.visible .tabs__body {
+  display: block; }
+
+.tabs.visible .tabs__open::after {
+  opacity: 0; }
+
+.tabs__body {
+  display: none; }
+
+.tabs__open {
+  position: relative;
+  padding-left: 25px;
+  cursor: default; }
+  .tabs__open::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 2px;
+    width: 14px;
+    background-color: #000;
+    content: '';
+    margin-top: -1px; }
+  .tabs__open::after {
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    height: 14px;
+    width: 2px;
+    background-color: #000;
+    content: '';
+    margin-top: -7px; }

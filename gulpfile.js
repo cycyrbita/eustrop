@@ -20,7 +20,7 @@ gulp.task('gcmq', function () {
 gulp.task('sass', function () {
   return gulp.src(['src/sass/core/*.scss', 'src/sass/plugin/**/*.scss', 'src/sass/block/**/*.scss'])
     .pipe(sass().on('error', sass.logError))
-    .pipe(concatCss('style.css'))
+    // .pipe(concatCss('style.css'))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 4 versions'],
       cascade: false

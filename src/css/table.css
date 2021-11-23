@@ -1,0 +1,15 @@
+.table {
+  overflow: auto; }
+  .table table {
+    width: 100%; }
+  .table caption {
+    padding: 10px;
+    font-weight: 700; }
+  .table th {
+    padding: 10px;
+    border: 1px solid #f1f1f1;
+    background-color: #f1f1f1;
+    white-space: nowrap; }
+  .table td {
+    padding: 5px;
+    border: 1px solid #f1f1f1; }

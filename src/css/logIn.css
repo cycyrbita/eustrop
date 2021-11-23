@@ -1,0 +1,182 @@
+.logIn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); }
+  .logIn.visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+.logIn__form {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  margin: auto;
+  overflow: hidden;
+  background-color: #fff; }
+  .logIn__form::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 200px;
+    height: 100px;
+    content: '';
+    background-color: #f1f1f1;
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    -ms-transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg); }
+  .logIn__form::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 200px;
+    height: 100px;
+    content: '';
+    background-color: #f1f1f1;
+    -webkit-transform: translate(50%, 50%) rotate(-45deg);
+    -ms-transform: translate(50%, 50%) rotate(-45deg);
+    transform: translate(50%, 50%) rotate(-45deg); }
+  .logIn__form a {
+    display: block;
+    font-size: 14px;
+    color: #519ddc;
+    text-align: center;
+    text-decoration: none; }
+    .logIn__form a:hover {
+      text-decoration: underline; }
+  .logIn__form textarea.logIn__field {
+    height: 100px; }
+  .logIn__form_enter {
+    max-width: 480px; }
+    .logIn__form_enter::before {
+      display: none; }
+    .logIn__form_enter::after {
+      display: none; }
+    .logIn__form_enter .logIn__btn {
+      max-width: 280px;
+      margin-right: auto;
+      margin-left: auto; }
+
+.logIn__title {
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #6d6d6d;
+  text-align: center;
+  letter-spacing: 3px; }
+
+.logIn__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  padding: 10px;
+  cursor: pointer; }
+  .logIn__close span {
+    width: 100%;
+    height: 2px;
+    background-color: #f70202; }
+    .logIn__close span:first-child {
+      -webkit-transform: translateY(2px) rotate(45deg);
+      -ms-transform: translateY(2px) rotate(45deg);
+      transform: translateY(2px) rotate(45deg); }
+    .logIn__close span:last-child {
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+
+.logIn__name {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px; }
+
+.logIn__label {
+  position: relative;
+  display: block;
+  margin-bottom: 20px; }
+  .logIn__label.error > .messageError {
+    display: block; }
+  .logIn__label.error > .logIn__field {
+    border-color: #f70202; }
+    .logIn__label.error > .logIn__field:focus {
+      border-color: #519ddc;
+      outline: none; }
+  .logIn__label.success > .logIn__field {
+    border-color: #0bb500; }
+    .logIn__label.success > .logIn__field:focus {
+      border-color: #519ddc;
+      outline: none; }
+
+.logIn__field {
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 20px;
+  resize: none;
+  background-color: #fff;
+  border: 1px solid #bbb;
+  border-radius: 3px; }
+  .logIn__field[type="checkbox"] {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    display: inline-block;
+    width: 15px;
+    height: 15px; }
+    .logIn__field[type="checkbox"] + span {
+      display: inline-block;
+      padding-left: 22px;
+      font-size: 14px; }
+  .logIn__field:focus {
+    border-color: #519ddc;
+    outline: none; }
+
+.messageError {
+  display: none;
+  margin-top: 5px;
+  font-size: 12px;
+  font-style: italic;
+  color: #f70202; }
+
+.logIn__btn {
+  display: block;
+  width: 100%;
+  padding: 10px 30px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 2px;
+  background-color: #519ddc;
+  border: 0; }
+  .logIn__btn:focus {
+    outline: none; }
+  .logIn__btn:hover {
+    background-color: #4092d6; }
