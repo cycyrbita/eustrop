@@ -1,6 +1,25 @@
 window.onload = function () {
     var language = {
-        "Русский": [
+        "RU": [
+            {
+                "QR-code": "QR-code",
+                "Participants": "Участники",
+                "QR-Generator": "QR-Генератор",
+                "Ranges": "Диапазоны",
+                "Map": "Карта",
+                "Help": "Помощь",
+                "Registration": "Регистрация",
+                "Specifications": "Характеристики",
+                "Service": "Обслуживание",
+                "Open registration form": "Открыть форму регистрации",
+                "Qxyz home page": "Главная страница qxyz",
+                "entrance": "Вход",
+                "Squares": "Квадратики",
+                "Lang": "Язык",
+                "qrcode": "qrcode"
+            }
+        ],
+        "EN": [
             {
                 "QR-code": "QR-code",
                 "Участники": "Participants",
@@ -18,25 +37,62 @@ window.onload = function () {
                 "Язык": "Lang",
                 "qrcode": "qrcode"
             }
-        ]
+        ],
+        // "ES": [
+        //     {
+        //         "QR-code": "QR-code",
+        //         "Участники": "Participantes",
+        //         "QR-Генератор": "Generador de QR",
+        //         "Диапазоны": "Rangos",
+        //         "Карта": "Mapa",
+        //         "Помощь": "Ayudar",
+        //         "Регистрация": "registro",
+        //         "Характеристики": "Especificaciones",
+        //         "Обслуживание": "Servicio",
+        //         "Открыть форму регистрации": "Formulario de registro abierto",
+        //         "Главная страница qxyz": "Página de inicio de Qxyz",
+        //         "Вход": "Entrada",
+        //         "Квадратики": "Cuadrícula",
+        //         "Язык": "Idioma",
+        //         "qrcode": "qrcode"
+        //     }
+        // ]
     }
 
-    var elms = document.getElementsByTagName("*"),
-        len = elms.length;
+    var lang = document.getElementById('language');
+    lang.addEventListener('change', function() {
 
-    for(var ii = 0; ii < len; ii++) {
-        var myChildred = elms[ii].childNodes;
-        
-        len2 = myChildred.length;
+        for (let key in language) {
+            if (language.hasOwnProperty(key)) {
+                if(this.value.toLowerCase() == key.toLowerCase()) {
 
-        for (var jj = 0; jj < len2; jj++) {
-            if(myChildred[jj].nodeType === 3) {
-                console.log(myChildred[jj].nodeValue);
+                    var newObj = {};
 
-                // example on update a text node's value
-                // myChildred[jj].nodeValue = myChildred[jj].nodeValue.replace(myChildred[jj].nodeValue, "123");
+                    for (let key2 in language[key][0]) {
+                        newObj[key2] = language[key][0][key2];
+                    }
+
+                    var elms = document.getElementsByTagName("*"),
+                    len = elms.length;
+
+                    for(var ii = 0; ii < len; ii++) {
+                        var myChildred = elms[ii].childNodes;
+                        
+                        len2 = myChildred.length;
+
+                        for (var jj = 0; jj < len2; jj++) {
+                            if(myChildred[jj].nodeType === 3) {
+
+                                for (let key3 in newObj) {
+                                    if(myChildred[jj].nodeValue == key3) {
+                                        myChildred[jj].nodeValue = myChildred[jj].nodeValue.replace(myChildred[jj].nodeValue, newObj[key3]);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
-    }
-
+    });
 }
