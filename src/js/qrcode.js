@@ -1,4 +1,4 @@
-window.onload = function () {
+window.addEventListener("load", function () {
     activeNav('qrcode');
     activeType();
     let infoForm = [];
@@ -115,4 +115,4 @@ window.onload = function () {
             }
         }
     }
-}
+})

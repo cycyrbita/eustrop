@@ -1,4 +1,5 @@
-window.onload = function () {
+
+window.addEventListener("load", function () {
     var language = {
         "RU": [
             {
@@ -95,4 +96,4 @@ window.onload = function () {
             }
         }
     });
-}
+});
