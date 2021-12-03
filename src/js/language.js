@@ -39,61 +39,71 @@ window.addEventListener("load", function () {
                 "qrcode": "qrcode"
             }
         ],
-        // "ES": [
-        //     {
-        //         "QR-code": "QR-code",
-        //         "Участники": "Participantes",
-        //         "QR-Генератор": "Generador de QR",
-        //         "Диапазоны": "Rangos",
-        //         "Карта": "Mapa",
-        //         "Помощь": "Ayudar",
-        //         "Регистрация": "registro",
-        //         "Характеристики": "Especificaciones",
-        //         "Обслуживание": "Servicio",
-        //         "Открыть форму регистрации": "Formulario de registro abierto",
-        //         "Главная страница qxyz": "Página de inicio de Qxyz",
-        //         "Вход": "Entrada",
-        //         "Квадратики": "Cuadrícula",
-        //         "Язык": "Idioma",
-        //         "qrcode": "qrcode"
-        //     }
-        // ]
+        "ES": [
+            {
+                "QR-code": "QR-code",
+                "Участники": "Participantes",
+                "QR-Генератор": "Generador de QR",
+                "Диапазоны": "Rangos",
+                "Карта": "Mapa",
+                "Помощь": "Ayudar",
+                "Регистрация": "registro",
+                "Характеристики": "Especificaciones",
+                "Обслуживание": "Servicio",
+                "Открыть форму регистрации": "Formulario de registro abierto",
+                "Главная страница qxyz": "Página de inicio de Qxyz",
+                "Вход": "Entrada",
+                "Квадратики": "Cuadrícula",
+                "Язык": "Idioma",
+                "qrcode": "qrcode"
+            }
+        ]
     }
 
-    var lang = document.getElementById('language');
-    lang.addEventListener('change', function() {
+    lang("*", 'lt', true);
 
-        for (let key in language) {
-            if (language.hasOwnProperty(key)) {
-                if(this.value.toLowerCase() == key.toLowerCase()) {
+    function lang(tagName, className, log) {
+        // складываем весь текст на странице в объект
+        var tagName = document.body.getElementsByTagName(tagName);
 
-                    var newObj = {};
+        // тут будет лежать весь текст который найдем
+        var pageContent = {};
+        
+        // класс который будем добавлять всем текстам у которых есть текст
+        var lt = className;
 
-                    for (let key2 in language[key][0]) {
-                        newObj[key2] = language[key][0][key2];
-                    }
+        // префикс для класса
+        var count = 0;
 
-                    var elms = document.getElementsByTagName("*"),
-                    len = elms.length;
+        for(var i = 0; i < tagName.length; i++) {
+            // исключаем теги
+            if(tagName[i].tagName != 'SCRIPT' && tagName[i].tagName != 'STYLE') {
+                // проверяем есть ли текст
+                if(tagName[i].innerHTML) {
+                    // узнаем есть ли текст внутри элемента(все дочерние теги отсеиваем)
+                    for(var k = 0; k < tagName[i].childNodes.length; k++) {
+                        // узнаем что содержится внутри тега(текст или тег)
+                        if(tagName[i].childNodes[k].nodeType === 3 && tagName[i].childNodes[k].nodeValue != 0) {
+                            // чистим классс
+                            lt = className;
 
-                    for(var ii = 0; ii < len; ii++) {
-                        var myChildred = elms[ii].childNodes;
-                        
-                        len2 = myChildred.length;
+                            // переписываем префикс
+                            count++;
 
-                        for (var jj = 0; jj < len2; jj++) {
-                            if(myChildred[jj].nodeType === 3) {
+                            // добавляем класс тегам
+                            tagName[i].classList.add(className);
 
-                                for (let key3 in newObj) {
-                                    if(myChildred[jj].nodeValue == key3) {
-                                        myChildred[jj].nodeValue = myChildred[jj].nodeValue.replace(myChildred[jj].nodeValue, newObj[key3]);
-                                    }
-                                }
-                            }
+                            // заполняем объект контентом
+                            pageContent[lt + count] = tagName[i].childNodes[k].nodeValue;
                         }
                     }
                 }
             }
         }
-    });
+
+        // выводим содержимое в консоль
+        if(log) {
+            console.log(pageContent);
+        }
+    }
 });
