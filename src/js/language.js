@@ -182,11 +182,13 @@ window.addEventListener("load", function () {
         // складываем весь текст на странице в объект
         var tagName = document.body.getElementsByTagName(tagName);
 
+        // если класс не указан
+        if(!className) {
+            className = 'lt';
+        }
+
         // тут будет лежать весь текст который найдем
         var pageContent = {};
-
-        // класс который будем добавлять всем текстам у которых есть текст
-        var lt = className;
 
         // префикс для класса
         var count = 0;
@@ -200,9 +202,6 @@ window.addEventListener("load", function () {
                     for (var k = 0; k < tagName[i].childNodes.length; k++) {
                         // узнаем что содержится внутри тега(текст или тег)
                         if (tagName[i].childNodes[k].nodeType === 3 && tagName[i].childNodes[k].nodeValue != 0) {
-                            // чистим классс
-                            lt = className;
-
                             // переписываем префикс
                             count++;
 
@@ -210,7 +209,7 @@ window.addEventListener("load", function () {
                             tagName[i].classList.add(className);
 
                             // заполняем объект контентом
-                            pageContent[lt + count] = tagName[i].childNodes[k].nodeValue;
+                            pageContent[className + count] = tagName[i].childNodes[k].nodeValue;
                         }
                     }
                 }
