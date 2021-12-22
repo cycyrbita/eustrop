@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<%- include('block/head') %>
+
+<body>
+    <div class="page">
+        <%- include('block/header') %>
+        <div class="page__body">
+            <div class="container">
+                <div class="content">
+                    <ul class="sitemap">
+                        <li class="sitemap"><a class="sitemap" href="/">Информация по QR-коду системы QXYZ</a>
+                            <ul class="sitemap">
+                                <li class="sitemap"><a class="sitemap" href="/members/">Участники системы (поставщики информации)</a>
+                                </li>
+                                <li class="sitemap"><a class="sitemap" href="/gen/">Генератор QR-кодов</a>
+                                    <ul class="sitemap">
+                                        <li class="sitemap"><a class="sitemap" href="/examples/">Примеры зарегистрированных QR-кодов</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sitemap"><a class="sitemap" href="/ranges/">Зарегистрированные диапазоны номеров</a>
+                                </li>
+                                <li class="sitemap"><a class="sitemap" href="/sitemap/">Карта сайта</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sitemap"><a class="sitemap" href="/help/">Справочная система</a>
+                            <ul class="sitemap">
+                                <li class="sitemap"><a class="sitemap" href="/help/tz/">Техническое задание</a>
+                                </li>
+                                <li class="sitemap"><a class="sitemap" href="/help/project/">Проект системы</a>
+                                </li>
+                                <li class="sitemap"><a class="sitemap" href="/help/tasks/">Задачи</a>
+                                </li>
+                                <li class="sitemap"><a class="sitemap" href="/cat.html">Прототип интерфейса №1</a>
+                                </li>
+                                <li class="sitemap"><a class="sitemap" href="/accordion.html">Прототип интерфейса №2 (аккордионы)</a>
+                                </li>
+                                <li class="sitemap"><a class="sitemap" href="/help/empty/">Пустая страница для отладки UI</a>
+                                </li>
+                                <li class="sitemap"><a class="sitemap" href="/examples/">Примеры зарегистрированных QR-кодов</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sitemap"><a class="sitemap" href="/edit/">Система редактирования(для участников)</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <%- include('block/footer') %>
+    </div>
+    <%- include('block/script') %>
+</body>
+
+</html>
